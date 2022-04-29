@@ -1,0 +1,20 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.9)
+  - SearchTextField (1.2.4)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - SearchTextField
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - SearchTextField
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
+
+PODFILE CHECKSUM: f4f411fe381a247c1561a9801698a9da381ae1a9
+
+COCOAPODS: 1.11.3
