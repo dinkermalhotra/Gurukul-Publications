@@ -5,5 +5,6 @@ target 'Gurukul Publications' do
 
     pod 'IQKeyboardManagerSwift'
     pod "SearchTextField"
-
+    pod 'GrowingTextView', '0.7.2'
+    pod 'DropDown'
 end

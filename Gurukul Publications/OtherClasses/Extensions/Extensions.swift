@@ -68,3 +68,121 @@ extension UITapGestureRecognizer {
         return NSLocationInRange(indexOfCharacter, targetRange)
     }
 }
+//MARK:- SEGMENT CONTORL 
+extension UISegmentedControl{
+    func removeBorder(){
+      var bgcolor: CGColor
+      var textColorNormal: UIColor
+      var textColorSelected: UIColor
+      
+      if self.traitCollection.userInterfaceStyle == .dark {
+        bgcolor = UIColor.black.cgColor
+        textColorNormal = UIColor.gray
+        textColorSelected = UIColor.white
+      } else {
+        bgcolor = UIColor.white.cgColor
+        textColorNormal = UIColor.black
+        textColorSelected = UIColor(red: 136, green: 0, blue: 155, alpha: 1.0)
+      }
+      
+      let backgroundImage = UIImage.getColoredRectImageWith(color: bgcolor, andSize: self.bounds.size)
+      self.setBackgroundImage(backgroundImage, for: .normal, barMetrics: .default)
+      self.setBackgroundImage(backgroundImage, for: .selected, barMetrics: .default)
+      self.setBackgroundImage(backgroundImage, for: .highlighted, barMetrics: .default)
+      
+      let deviderImage = UIImage.getColoredRectImageWith(color: bgcolor, andSize: CGSize(width: 1.0, height: self.bounds.size.height))
+      self.setDividerImage(deviderImage, forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
+      self.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: textColorNormal], for: .normal)
+      self.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: textColorSelected], for: .selected)
+      
+    }
+    
+    func setupSegment() {
+      DispatchQueue.main.async() {
+      self.removeBorder()
+      self.addUnderlineForSelectedSegment()
+      }
+    }
+    
+    func addUnderlineForSelectedSegment(){
+      DispatchQueue.main.async() {
+        self.removeUnderline()
+        let underlineWidth: CGFloat = self.bounds.size.width / CGFloat(self.numberOfSegments)
+        let underlineHeight: CGFloat = 2.0
+        let underlineXPosition = CGFloat(self.selectedSegmentIndex * Int(underlineWidth))
+        let underLineYPosition = self.bounds.size.height - 4.0
+        let underlineFrame = CGRect(x: underlineXPosition, y: underLineYPosition, width: underlineWidth, height: underlineHeight)
+        let underline = UIView(frame: underlineFrame)
+        underline.backgroundColor =  UIColor(red: 136, green: 0, blue: 155, alpha: 1.0)
+        underline.tag = 1
+        self.addSubview(underline)
+        
+      }
+    }
+    
+    func changeUnderlinePosition(){
+      guard let underline = self.viewWithTag(1) else {return}
+      let underlineFinalXPosition = (self.bounds.width / CGFloat(self.numberOfSegments)) * CGFloat(selectedSegmentIndex)
+      underline.frame.origin.x = underlineFinalXPosition
+    }
+    
+    func removeUnderline(){
+      guard let underline = self.viewWithTag(1) else {return}
+      underline.removeFromSuperview()
+    }
+  }
+
+  extension UIImage{
+    
+    class func getColoredRectImageWith(color: CGColor, andSize size: CGSize) -> UIImage{
+      UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+      let graphicsContext = UIGraphicsGetCurrentContext()
+      graphicsContext?.setFillColor(color)
+      let rectangle = CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height)
+      graphicsContext?.fill(rectangle)
+      let rectangleImage = UIGraphicsGetImageFromCurrentImageContext()
+      UIGraphicsEndImageContext()
+      return rectangleImage!
+    }
+
+}
+
+
+extension UINavigationController {
+
+    func setStatusBar(backgroundColor: UIColor) {
+        let statusBarFrame: CGRect
+        if #available(iOS 13.0, *) {
+            statusBarFrame = view.window?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero
+        } else {
+            statusBarFrame = UIApplication.shared.statusBarFrame
+        }
+        let statusBarView = UIView(frame: statusBarFrame)
+        statusBarView.backgroundColor = backgroundColor
+        view.addSubview(statusBarView)
+    }
+
+}
+func alertModule(onVC viewController: UIViewController,title:String,msg:String){
+       let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+       let alertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.destructive, handler: {(alert : UIAlertAction!) in
+           alertController.dismiss(animated: true, completion: nil)
+       })
+       alertController.addAction(alertAction)
+    viewController.present(alertController, animated: true, completion: nil)
+   }
+
+ func showOKCancelAlertWithCompletion(onVC viewController: UIViewController, title: String, message: String, btnOkTitle: String, btnCancelTitle: String, onOk: @escaping ()->()) {
+    DispatchQueue.main.async {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: btnOkTitle, style:.default, handler: { (action:UIAlertAction) in
+            onOk()
+        }))
+        alert.addAction(UIAlertAction(title: btnCancelTitle, style:.default, handler: { (action:UIAlertAction) in
+            
+        }))
+        alert.view.tintColor = UIColor.black
+        alert.view.setNeedsLayout()
+        viewController.present(alert, animated: true, completion: nil)
+    }
+}
