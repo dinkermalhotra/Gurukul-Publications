@@ -25,6 +25,7 @@ class AddPartyViewController: UIViewController,UITextViewDelegate {
     @IBAction func submitBtnAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SelectionCommitteeViewController") as! SelectionCommitteeViewController
+        vc.receivedString = "false"
         navigationController?.pushViewController(vc,animated: true)
         
     }

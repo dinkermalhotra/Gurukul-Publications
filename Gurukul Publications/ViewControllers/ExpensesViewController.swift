@@ -7,6 +7,7 @@ class ExpensesViewController: UIViewController {
     @IBOutlet weak var localBtn: UIButton!
     @IBOutlet weak var outStationBtn: UIButton!
     @IBOutlet var checkBoxArray: [UIButton]!
+    @IBOutlet weak var submitBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,5 +48,9 @@ class ExpensesViewController: UIViewController {
     
     @IBAction func checkBoxArrayAction(_ sender: UIButton) {
         
+    }
+    
+    @IBAction func submitBtnAction(_ sender: Any) {
+    
     }
 }

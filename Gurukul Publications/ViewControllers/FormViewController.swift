@@ -11,6 +11,7 @@ class FormViewController: UIViewController,UITextViewDelegate {
     @IBOutlet weak var partyView: UIView!
     @IBOutlet weak var partyLbl: UILabel!
     @IBOutlet weak var samplingMonthTop: NSLayoutConstraint!
+    @IBOutlet weak var nextBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         dispalyRemarksViewData()
@@ -47,4 +48,10 @@ class FormViewController: UIViewController,UITextViewDelegate {
 
     }
     
+    @IBAction func nextBtnAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SelectionCommitteeViewController") as! SelectionCommitteeViewController
+        vc.receivedString = "true"
+        navigationController?.pushViewController(vc,animated: true)
+    }
 }

@@ -161,7 +161,12 @@ extension UINavigationController {
         statusBarView.backgroundColor = backgroundColor
         view.addSubview(statusBarView)
     }
-
+    
+    func popToViewController(ofClass: AnyClass, animated: Bool = true) {
+      if let vc = viewControllers.last(where: { $0.isKind(of: ofClass) }) {
+        popToViewController(vc, animated: animated)
+      }
+    }
 }
 func alertModule(onVC viewController: UIViewController,title:String,msg:String){
        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
@@ -172,14 +177,14 @@ func alertModule(onVC viewController: UIViewController,title:String,msg:String){
     viewController.present(alertController, animated: true, completion: nil)
    }
 
- func showOKCancelAlertWithCompletion(onVC viewController: UIViewController, title: String, message: String, btnOkTitle: String, btnCancelTitle: String, onOk: @escaping ()->()) {
+func showOKCancelAlertWithCompletion(onVC viewController: UIViewController, title: String, message: String, btnOkTitle: String, btnCancelTitle: String, onOk: @escaping ()->(), onCancel: @escaping ()->()) {
     DispatchQueue.main.async {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: btnOkTitle, style:.default, handler: { (action:UIAlertAction) in
             onOk()
         }))
         alert.addAction(UIAlertAction(title: btnCancelTitle, style:.default, handler: { (action:UIAlertAction) in
-            
+            onCancel()
         }))
         alert.view.tintColor = UIColor.black
         alert.view.setNeedsLayout()

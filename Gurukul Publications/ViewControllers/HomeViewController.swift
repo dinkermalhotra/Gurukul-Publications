@@ -39,7 +39,11 @@ class HomeViewController: UIViewController {
     }
     
     @objc func didTapLogoutButton(sender: AnyObject){
-        
+        showOKCancelAlertWithCompletion(onVC: self, title: "Confirmation", message: "Are you sure you want to continue?", btnOkTitle: "YES", btnCancelTitle: "NO", onOk: {
+            
+        }, onCancel: {
+            
+        })
     }
     
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
