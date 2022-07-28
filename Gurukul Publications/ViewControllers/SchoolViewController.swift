@@ -25,16 +25,15 @@ class SchoolViewController: UIViewController {
     @IBAction func nextBtnAction(_ sender: Any) {
         if (dateField.text?.isEmpty)!
         {
-            alertModule(onVC: self, title: "Alert", msg: "Please select date")
+            alertModule(onVC: self, title: Alert, msg: Select_date)
         }
         else if (textField.text?.isEmpty)!
         {
-            alertModule(onVC: self, title: "Alert", msg: "Enter no. of school")
+            alertModule(onVC: self, title: Alert, msg: Number_of_school)
         }
         else
         {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
+            let vc = storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.FORM_VC) as! FormViewController
             navigationController?.pushViewController(vc,animated: true)
         }
         

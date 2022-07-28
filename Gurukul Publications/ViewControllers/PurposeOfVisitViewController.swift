@@ -12,27 +12,34 @@ class PurposeOfVisitViewController: UIViewController {
     @IBOutlet var checkBoxArray: [UIButton]!
     
     var saveDefaultValue = ""
-    //MARK:- <------------- viewDidLoad --------------->
-    override func viewDidLoad() {
+    var selectedButton = 0
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        submitBtnTop.constant = 30
-        self.navigationItem.title = "Purpose of visit"
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-       
+        //submitBtnTop.constant = 30
+        
+    }
+    
+    @IBAction func backBtnClicked(_ sender: UIBarButtonItem)
+    {
+        navigationController?.popViewController(animated: true)
     }
     
     //MARK:- <------------- Button Action --------------->
     @IBAction func checkBoxArrayAction(_ sender: UIButton) {
-        
-        let button  = sender as UIButton
-        
+
         for i in 0...6
         {
+            let button  = sender as UIButton
+           
             let btn = button.viewWithTag(i) as? UIButton
             
             if btn?.tag == i
             {
                 btn?.isSelected = true
+                checkBoxArray[selectedButton].isSelected = false
+                checkBoxArray[i].isSelected = true
+                selectedButton = i
                 if btn?.tag == 0
                 {
                     showRemarksView()
@@ -82,39 +89,48 @@ class PurposeOfVisitViewController: UIViewController {
         
     }
     
-    @IBAction func submitBtnAction(_ sender: UIButton) {
+    @IBAction func submitBtnAction(_ sender: UIButton)
+    {
         
-        if saveDefaultValue == "0"{
+        if saveDefaultValue == "0"
+        {
             pushToSampleListVc()
         }
+        
         else if saveDefaultValue == "1"
         {
             showConfirmationMsg()
         }
+        
         else if saveDefaultValue == "2"
         {
             pushToOrderVC()
         }
+        
         else if saveDefaultValue == "3"
         {
             if remarksTxt.text == ""{
-                alertModule(onVC: self, title: "Alert", msg: "Please enter remarks")
+                alertModule(onVC: self, title: Alert, msg: Enter_remarks)
             }else{
                 showConfirmationMsg()
             }
         }
+        
         else if saveDefaultValue == "4"
         {
             pushToPaymentVC()
         }
+        
         else if saveDefaultValue == "5"
         {
             showConfirmationMsg()
         }
+        
         else if saveDefaultValue == "6"
         {
             showConfirmationMsg()
         }
+        
         else
         {
             
@@ -123,17 +139,21 @@ class PurposeOfVisitViewController: UIViewController {
         
     }
     
-    func showRemarksView(){
+    func showRemarksView()
+    {
+        
         remarksView.isHidden = false
         remarksLbl.isHidden = false
         remarksTxt.isHidden = false
         submitBtnTop.constant = 120
     }
     
-    func showConfirmationMsg(){
-        showOKCancelAlertWithCompletion(onVC: self, title: "Confirmation", message: "Are you sure you want to continue?", btnOkTitle: "YES", btnCancelTitle: "NO", onOk: {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "AddPartyViewController") as! AddPartyViewController
+    func showConfirmationMsg()
+    {
+        
+        showOKCancelAlertWithCompletion(onVC: self, title: Confirmation, message: Alert_msg, btnOkTitle: YES, btnCancelTitle: NO, onOk: {
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.ADD_PARTY_VC) as! AddPartyViewController
             self.navigationController?.pushViewController(vc,animated: true)
         }, onCancel: {
             
@@ -141,20 +161,23 @@ class PurposeOfVisitViewController: UIViewController {
         })
     }
     
-    func pushToOrderVC(){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "OrderViewController") as! OrderViewController
+    func pushToOrderVC()
+    {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.ORDER_VC) as! OrderViewController
         self.navigationController?.pushViewController(vc,animated: true)
     }
-    func pushToSampleListVc(){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SampleListViewController") as! SampleListViewController
+    func pushToSampleListVc()
+    {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.SAMPLE_LIST_VC) as! SampleListViewController
         self.navigationController?.pushViewController(vc,animated: true)
         
     }
-    func pushToPaymentVC(){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
+    func pushToPaymentVC()
+    {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.PAYMENT_VC) as! PaymentViewController
         self.navigationController?.pushViewController(vc,animated: true)
     }
     

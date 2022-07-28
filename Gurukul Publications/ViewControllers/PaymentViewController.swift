@@ -16,14 +16,24 @@ class PaymentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Purpose of visit"
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        setupUI()
+    }
+    
+    func setupUI()
+    {
         checkAmountView.isHidden = true
         chequeNumberView.isHidden = true
         resonView.isHidden = true
     }
     
-    @IBAction func checkBoxesAction(_ sender: UIButton) {
+    @IBAction func backBtnClicked(_ sender: UIBarButtonItem)
+    {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func checkBoxesAction(_ sender: UIButton)
+    {
         let button  = sender as UIButton
         
         for i in 0...4
@@ -94,13 +104,15 @@ class PaymentViewController: UIViewController {
     }
     
     
-    @IBAction func submitBtnAction(_ sender: Any) {
+    @IBAction func submitBtnAction(_ sender: Any)
+    {
         pushToOtpVC()
     }
     
-    func pushToOtpVC(){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "OTPViewController") as! OTPViewController
+    func pushToOtpVC()
+    {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.OTP_VC) as! OTPViewController
         navigationController?.pushViewController(vc,animated: true)
     }
 }

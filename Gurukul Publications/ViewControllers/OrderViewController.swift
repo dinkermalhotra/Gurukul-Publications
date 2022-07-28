@@ -8,38 +8,46 @@ class OrderViewController: UIViewController,UIImagePickerControllerDelegate,UINa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Order"
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
         
     }
     
-    @IBAction func submitBtnAction(_ sender: Any) {
-        showOKCancelAlertWithCompletion(onVC: self, title: "Confirmation", message: "Are you sure you want to continue?", btnOkTitle: "YES", btnCancelTitle: "NO", onOk: {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let vc = storyboard.instantiateViewController(withIdentifier: "AddPartyViewController") as! AddPartyViewController
-    self.navigationController?.pushViewController(vc,animated: true)
+    @IBAction func backBtnClicked(_ sender: UIBarButtonItem)
+    {
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func submitBtnAction(_ sender: Any)
+    {
+        
+        showOKCancelAlertWithCompletion(onVC: self, title: Confirmation, message: Alert_msg, btnOkTitle: YES, btnCancelTitle: NO, onOk: {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.ADD_PARTY_VC) as! AddPartyViewController
+            self.navigationController?.pushViewController(vc,animated: true)
         }, onCancel: {
-
+            
             self.navigationController?.popToViewController(ofClass: HomeViewController.self)
         })
         
     }
-   
-    @IBAction func cameraBtnAction(_ sender: Any) {
-        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+    
+    @IBAction func cameraBtnAction(_ sender: Any)
+    {
+        let alert = UIAlertController(title: Choose_image, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: Camera, style: .default, handler: { _ in
             self.openCamera()
         }))
         
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: Gallery, style: .default, handler: { _ in
             self.openGallery()
         }))
         
-        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction.init(title: Cancel, style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
         
     }
+    
     func openCamera()
     {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
@@ -51,11 +59,12 @@ class OrderViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         }
         else
         {
-            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            let alert  = UIAlertController(title: Warning, message: Camera_msg, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: OK, style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
     func openGallery()
     {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
@@ -67,8 +76,8 @@ class OrderViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         }
         else
         {
-            let alert  = UIAlertController(title: "Warning", message: "You don't have permission to access gallery.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            let alert  = UIAlertController(title: Warning, message: Premission_msg, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: OK, style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }

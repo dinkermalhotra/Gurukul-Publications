@@ -9,28 +9,33 @@ class ExpensesViewController: UIViewController {
     @IBOutlet var checkBoxArray: [UIButton]!
     @IBOutlet weak var submitBtn: UIButton!
     
-    override func viewDidLoad() {
+    var selectedButton = 0
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         self.dateField.setInputViewDatePicker(target: self, selector: #selector(tapDone))
-        
     }
+    
     @objc func tapDone() {
         if let datePicker = self.dateField.inputView as? UIDatePicker {
             let dateformatter = DateFormatter()
             dateformatter.dateStyle = .medium
-            dateformatter.dateFormat = "dd/MM/yyyy"
+            dateformatter.dateFormat = Date_formatterSlash
             self.dateField.text = dateformatter.string(from: datePicker.date)
         }
         self.dateField.resignFirstResponder()
     }
     
-    @IBAction func outStationBtnAction(_ sender: UIButton) {
-        //        self.outStationBtn.isSelected = !self.outStationBtn.isSelected
+    @IBAction func outStationBtnAction(_ sender: UIButton)
+    {
         if outStationBtn.currentImage == UIImage(named: "uncheckbox.png") {
             self.outStationBtn.setImage(UIImage(named: "checkbox.png"), for: .normal)
             self.localBtn.setImage(UIImage(named: "uncheckbox.png"), for: .normal)
+            
         }
-        else {
+        else
+        {
             self.outStationBtn.setImage(UIImage(named: "checkbox.png"), for: .normal)
             self.localBtn.setImage(UIImage(named: "uncheckbox.png"), for: .normal)
         }
@@ -48,9 +53,16 @@ class ExpensesViewController: UIViewController {
     
     @IBAction func checkBoxArrayAction(_ sender: UIButton) {
         
+        let tag = sender.tag
+        checkBoxArray[selectedButton].isSelected = false
+        checkBoxArray[tag].isSelected = true
+        selectedButton = tag
     }
     
-    @IBAction func submitBtnAction(_ sender: Any) {
+    @IBAction func submitBtnAction(_ sender: UIButton)
     
+    {
+    
+        
     }
 }

@@ -11,39 +11,36 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
+    }
+    
+    
+    func setupUI(){
         partyView.alpha = 0
         schoolView.alpha = 1
         expensesView.alpha = 0
         segmentControl.setupSegment()
-        //        self.navigationController?.setStatusBar(backgroundColor: UIColor(red: 136, green: 0, blue: 155, alpha: 1.0))
-//        if #available(iOS 15, *) {
-//            let appearance = UINavigationBarAppearance()
-//            appearance.configureWithOpaqueBackground()
-//            appearance.backgroundColor = UIColor(red: 136, green: 0, blue: 155, alpha: 1.0)
-//            navigationController?.navigationBar.standardAppearance = appearance
-//            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
-//        }
-        
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.navigationItem.title = "Home"
-        let reportButton   = UIBarButtonItem(title: "Report",  style: .plain, target: self, action: #selector(didTapReportButton(sender:)))
-        let logoutButton = UIBarButtonItem(title: "Logout",  style: .plain, target: self, action: #selector(didTapLogoutButton(sender:)))
-        
-        navigationItem.rightBarButtonItems = [logoutButton, reportButton]
+      
     }
-    
-    @objc func didTapReportButton(sender: AnyObject){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ReportViewController") as! ReportViewController
+   
+    @IBAction func reportBtnClicked(_ sender: UIBarButtonItem) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.REPORT_VIEW_VC) as! ReportViewController
         navigationController?.pushViewController(vc,animated: true)
+        
     }
     
-    @objc func didTapLogoutButton(sender: AnyObject){
-        showOKCancelAlertWithCompletion(onVC: self, title: "Confirmation", message: "Are you sure you want to continue?", btnOkTitle: "YES", btnCancelTitle: "NO", onOk: {
+    @IBAction func LogoutBtnClicked(_ sender: UIBarButtonItem) {
+        showOKCancelAlertWithCompletion(onVC: self, title: Confirmation, message: Alert_msg, btnOkTitle: YES, btnCancelTitle: NO, onOk: {
             
         }, onCancel: {
             
         })
+        
+    }
+    
+    @IBAction func backBtnClicked(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {

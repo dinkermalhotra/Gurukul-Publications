@@ -21,18 +21,24 @@ class SelectionCommitteeViewController: UIViewController,UINavigationControllerD
     @IBOutlet weak var submitBtn: UIButton!
     
     var receivedString = ""
-    
     let dropDownMenu = DropDown()
-    override func viewDidLoad() {
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         submitBtnTop.constant = 50
         
-        self.navigationItem.title = "Selection Committee"
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+       
         
     }
     
-    @IBAction func dropDownBtnAction(_ sender: Any) {
+    @IBAction func backBtnClicked(_ sender: UIBarButtonItem)
+    {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func dropDownBtnAction(_ sender: Any)
+    {
         if receivedString == "true"{
             dropDownMenu.dataSource = ["Coordinator", "Principle", "Director", "Librarian","Vice Principle","Subject Teacher","Others"]
         }else{
@@ -64,38 +70,37 @@ class SelectionCommitteeViewController: UIViewController,UINavigationControllerD
     
     
     @IBAction func submitBtnAction(_ sender: UIButton) {
-        if dropDown.currentTitle == "Select concern"{
-            alertModule(onVC: self, title: "Alert", msg: "Please select concern person")
+        if dropDown.currentTitle == Select_concern{
+            alertModule(onVC: self, title: Alert, msg: Select_concern_person)
         }
         else if (nameTxt.text?.isEmpty ?? true)
         {
             
-            alertModule(onVC: self, title: "Alert", msg: "Please enter concern person name")
+            alertModule(onVC: self, title: Alert, msg: Concern_person_name)
         }
         else if (mobileTxt.text?.isEmpty ?? true)
         {
             
-            alertModule(onVC: self, title: "Alert", msg: "Please enter concern person mobile no.")
+            alertModule(onVC: self, title: Alert, msg: Concern_person_no)
         }
         else{
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "PurposeOfVisitViewController") as! PurposeOfVisitViewController
+            let vc = storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.PURPOSE_VISIT_VC) as! PurposeOfVisitViewController
             navigationController?.pushViewController(vc,animated: true)
         }
         
     }
     
     @IBAction func cameraBtnAction(_ sender: Any) {
-        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+        let alert = UIAlertController(title: Choose_image, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: Camera, style: .default, handler: { _ in
             self.openCamera()
         }))
         
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: Gallery, style: .default, handler: { _ in
             self.openGallery()
         }))
         
-        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction.init(title: Cancel, style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
         
@@ -111,11 +116,12 @@ class SelectionCommitteeViewController: UIViewController,UINavigationControllerD
         }
         else
         {
-            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            let alert  = UIAlertController(title: Warning, message: Camera_msg, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: OK, style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
     func openGallery()
     {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
@@ -127,11 +133,12 @@ class SelectionCommitteeViewController: UIViewController,UINavigationControllerD
         }
         else
         {
-            let alert  = UIAlertController(title: "Warning", message: "You don't have permission to access gallery.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            let alert  = UIAlertController(title: Warning, message: Gallery_premission, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: OK, style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
     //MARK:-- ImagePicker delegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {

@@ -18,7 +18,8 @@ class SignInViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool)
+    {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.isHidden = false
     }
@@ -26,8 +27,7 @@ class SignInViewController: UIViewController {
     //MARK:- <-------------SIGN IN BUTTON ACTION --------------------->
     @IBAction func signInBtnAction(_ sender: Any)
     {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.HOME_VC) as! HomeViewController
         navigationController?.pushViewController(vc,animated: true)
     }
 }

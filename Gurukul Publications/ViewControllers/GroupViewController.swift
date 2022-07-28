@@ -16,7 +16,8 @@ class GroupViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupViewControllerCell", for: indexPath) as! GroupViewControllerCell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: CELLINDENTIFIRES_ID.GROUP_VIEW_CELL, for: indexPath) as! GroupViewControllerCell
         cell.bgView.layer.cornerRadius = 5
         cell.bgView.layer.borderWidth = 0.2
         return cell

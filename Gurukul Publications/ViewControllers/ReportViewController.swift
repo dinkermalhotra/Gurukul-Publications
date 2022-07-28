@@ -9,12 +9,13 @@ class ReportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Report"
+        
         segmentControl.setupSegment()
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.dateField.setInputViewDatePicker(target: self, selector: #selector(tapDone))
         
     }
+    
+    
     @objc func tapDone() {
         if let datePicker = self.dateField.inputView as? UIDatePicker {
             let dateformatter = DateFormatter()
@@ -24,6 +25,11 @@ class ReportViewController: UIViewController {
         }
         self.dateField.resignFirstResponder()
     }
+    
+    @IBAction func backBtnClicked(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
         segmentControl.changeUnderlinePosition()
     }
@@ -44,8 +50,8 @@ extension UITextField {
         
         let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 44.0))
         let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: #selector(tapCancel))
-        let barButton = UIBarButtonItem(title: "Done", style: .plain, target: target, action: selector)
+        let cancel = UIBarButtonItem(title: Cancel, style: .plain, target: nil, action: #selector(tapCancel))
+        let barButton = UIBarButtonItem(title: Done, style: .plain, target: target, action: selector)
         toolBar.setItems([cancel, flexible, barButton], animated: false)
         self.inputAccessoryView = toolBar
     }

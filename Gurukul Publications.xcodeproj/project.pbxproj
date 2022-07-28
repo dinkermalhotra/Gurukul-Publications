@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801538AD282273CD00DB4106 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801538AC282273CD00DB4106 /* FormViewController.swift */; };
+		80605B6B28200457004126C2 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80605B6A28200457004126C2 /* ReportViewController.swift */; };
+		80605B6D28210162004126C2 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80605B6C28210162004126C2 /* ExpensesViewController.swift */; };
+		80605B6F2821141A004126C2 /* SchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80605B6E2821141A004126C2 /* SchoolViewController.swift */; };
+		80605B712821142E004126C2 /* PartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80605B702821142E004126C2 /* PartyViewController.swift */; };
+		806D14882822924C00631219 /* AddPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D14872822924C00631219 /* AddPartyViewController.swift */; };
+		806D148A2823829A00631219 /* SelectionCommitteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D14892823829A00631219 /* SelectionCommitteeViewController.swift */; };
+		8073ED5D28913671009513BE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8073ED5C28913671009513BE /* Constant.swift */; };
+		807C637D285C681800D556A5 /* PrimaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C637C285C681800D556A5 /* PrimaryViewController.swift */; };
+		807C637F285C683900D556A5 /* IndividualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C637E285C683900D556A5 /* IndividualViewController.swift */; };
+		807C6381285C685000D556A5 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C6380285C685000D556A5 /* GroupViewController.swift */; };
+		807C6387285C6B2500D556A5 /* IndividualViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C6386285C6B2500D556A5 /* IndividualViewControllerCell.swift */; };
+		807C6389285C6B4600D556A5 /* PrimaryViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C6388285C6B4600D556A5 /* PrimaryViewControllerCell.swift */; };
+		807C638B285C6B5E00D556A5 /* GroupViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C638A285C6B5E00D556A5 /* GroupViewControllerCell.swift */; };
+		80AB29322858A068009002F6 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB29312858A068009002F6 /* OrderViewController.swift */; };
+		80AB2934285996B6009002F6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB2933285996B6009002F6 /* PaymentViewController.swift */; };
+		80ABA7512859FF5F00AAEE4A /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ABA7502859FF5E00AAEE4A /* OTPViewController.swift */; };
 		80B0274A281BDF1900B008D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B02749281BDF1900B008D3 /* AppDelegate.swift */; };
 		80B0274C281BDF1900B008D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0274B281BDF1900B008D3 /* SceneDelegate.swift */; };
 		80B02751281BDF1900B008D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B0274F281BDF1900B008D3 /* Main.storyboard */; };
@@ -18,6 +35,9 @@
 		80B0278A281BE94A00B008D3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B02789281BE94900B008D3 /* UIView+Extension.swift */; };
 		80B0278C281BE95600B008D3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0278B281BE95600B008D3 /* Extensions.swift */; };
 		80B0278E281BED7D00B008D3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0278D281BED7D00B008D3 /* SignInViewController.swift */; };
+		80B02790281C0D1F00B008D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0278F281C0D1F00B008D3 /* HomeViewController.swift */; };
+		80C6AA6F285C54060008E656 /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6AA6E285C54060008E656 /* SampleListViewController.swift */; };
+		80D944A228239DE60077E958 /* PurposeOfVisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D944A128239DE60077E958 /* PurposeOfVisitViewController.swift */; };
 		9E7FA28DC135D742102407FB /* Pods_Gurukul_Publications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B4651F53BABB66591EA6B7 /* Pods_Gurukul_Publications.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +59,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		801538AC282273CD00DB4106 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		80605B6A28200457004126C2 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		80605B6C28210162004126C2 /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
+		80605B6E2821141A004126C2 /* SchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
+		80605B702821142E004126C2 /* PartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewController.swift; sourceTree = "<group>"; };
+		806D14872822924C00631219 /* AddPartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPartyViewController.swift; sourceTree = "<group>"; };
+		806D14892823829A00631219 /* SelectionCommitteeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCommitteeViewController.swift; sourceTree = "<group>"; };
+		8073ED5C28913671009513BE /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		807C637C285C681800D556A5 /* PrimaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryViewController.swift; sourceTree = "<group>"; };
+		807C637E285C683900D556A5 /* IndividualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualViewController.swift; sourceTree = "<group>"; };
+		807C6380285C685000D556A5 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		807C6386285C6B2500D556A5 /* IndividualViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualViewControllerCell.swift; sourceTree = "<group>"; };
+		807C6388285C6B4600D556A5 /* PrimaryViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryViewControllerCell.swift; sourceTree = "<group>"; };
+		807C638A285C6B5E00D556A5 /* GroupViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewControllerCell.swift; sourceTree = "<group>"; };
+		80AB29312858A068009002F6 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		80AB2933285996B6009002F6 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		80ABA7502859FF5E00AAEE4A /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		80B02746281BDF1900B008D3 /* Gurukul Publications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gurukul Publications.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B02749281BDF1900B008D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B0274B281BDF1900B008D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +91,9 @@
 		80B02789281BE94900B008D3 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		80B0278B281BE95600B008D3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		80B0278D281BED7D00B008D3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		80B0278F281C0D1F00B008D3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		80C6AA6E285C54060008E656 /* SampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListViewController.swift; sourceTree = "<group>"; };
+		80D944A128239DE60077E958 /* PurposeOfVisitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurposeOfVisitViewController.swift; sourceTree = "<group>"; };
 		C17A558C6DC7CE774F8FF200 /* Pods-Gurukul Publications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gurukul Publications.debug.xcconfig"; path = "Target Support Files/Pods-Gurukul Publications/Pods-Gurukul Publications.debug.xcconfig"; sourceTree = "<group>"; };
 		D4B4651F53BABB66591EA6B7 /* Pods_Gurukul_Publications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gurukul_Publications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA923CF3B6EA251996FAC5D4 /* Pods-Gurukul Publications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gurukul Publications.release.xcconfig"; path = "Target Support Files/Pods-Gurukul Publications/Pods-Gurukul Publications.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +134,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		807C6383285C6A9100D556A5 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				807C6386285C6B2500D556A5 /* IndividualViewControllerCell.swift */,
+				807C6388285C6B4600D556A5 /* PrimaryViewControllerCell.swift */,
+				807C638A285C6B5E00D556A5 /* GroupViewControllerCell.swift */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		80828FE82886AFD70079C0EC /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				8073ED5C28913671009513BE /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		80B0273D281BDF1900B008D3 = {
 			isa = PBXGroup;
 			children = (
@@ -120,8 +178,10 @@
 			isa = PBXGroup;
 			children = (
 				80B02783281BE89200B008D3 /* OtherClasses */,
+				80828FE82886AFD70079C0EC /* Constant */,
 				80B02779281BDF9000B008D3 /* Delegate */,
 				80B0277A281BDF9C00B008D3 /* ViewControllers */,
+				807C6383285C6A9100D556A5 /* TableCell */,
 				80B0277B281BDFBD00B008D3 /* Storyboard */,
 				80B0277C281BDFD100B008D3 /* SupportingFiles */,
 			);
@@ -158,6 +218,22 @@
 			isa = PBXGroup;
 			children = (
 				80B0278D281BED7D00B008D3 /* SignInViewController.swift */,
+				80605B6A28200457004126C2 /* ReportViewController.swift */,
+				80605B6E2821141A004126C2 /* SchoolViewController.swift */,
+				80AB29312858A068009002F6 /* OrderViewController.swift */,
+				801538AC282273CD00DB4106 /* FormViewController.swift */,
+				807C637C285C681800D556A5 /* PrimaryViewController.swift */,
+				807C637E285C683900D556A5 /* IndividualViewController.swift */,
+				806D14872822924C00631219 /* AddPartyViewController.swift */,
+				807C6380285C685000D556A5 /* GroupViewController.swift */,
+				80C6AA6E285C54060008E656 /* SampleListViewController.swift */,
+				806D14892823829A00631219 /* SelectionCommitteeViewController.swift */,
+				80D944A128239DE60077E958 /* PurposeOfVisitViewController.swift */,
+				80ABA7502859FF5E00AAEE4A /* OTPViewController.swift */,
+				80AB2933285996B6009002F6 /* PaymentViewController.swift */,
+				80605B702821142E004126C2 /* PartyViewController.swift */,
+				80B0278F281C0D1F00B008D3 /* HomeViewController.swift */,
+				80605B6C28210162004126C2 /* ExpensesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,7 +292,7 @@
 				80B02742281BDF1900B008D3 /* Sources */,
 				80B02743281BDF1900B008D3 /* Frameworks */,
 				80B02744281BDF1900B008D3 /* Resources */,
-				08004399087FBB3FE16F2958 /* [CP] Embed Pods Frameworks */,
+				98BFC69283925F7D039A429D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,7 +410,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08004399087FBB3FE16F2958 /* [CP] Embed Pods Frameworks */ = {
+		98BFC69283925F7D039A429D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -381,10 +457,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				80B0278C281BE95600B008D3 /* Extensions.swift in Sources */,
+				80AB2934285996B6009002F6 /* PaymentViewController.swift in Sources */,
+				807C637D285C681800D556A5 /* PrimaryViewController.swift in Sources */,
+				807C6389285C6B4600D556A5 /* PrimaryViewControllerCell.swift in Sources */,
+				807C638B285C6B5E00D556A5 /* GroupViewControllerCell.swift in Sources */,
+				801538AD282273CD00DB4106 /* FormViewController.swift in Sources */,
+				807C6387285C6B2500D556A5 /* IndividualViewControllerCell.swift in Sources */,
+				80605B6D28210162004126C2 /* ExpensesViewController.swift in Sources */,
 				80B0274A281BDF1900B008D3 /* AppDelegate.swift in Sources */,
+				807C6381285C685000D556A5 /* GroupViewController.swift in Sources */,
+				80D944A228239DE60077E958 /* PurposeOfVisitViewController.swift in Sources */,
 				80B0274C281BDF1900B008D3 /* SceneDelegate.swift in Sources */,
 				80B0278E281BED7D00B008D3 /* SignInViewController.swift in Sources */,
+				806D148A2823829A00631219 /* SelectionCommitteeViewController.swift in Sources */,
 				80B0278A281BE94A00B008D3 /* UIView+Extension.swift in Sources */,
+				80B02790281C0D1F00B008D3 /* HomeViewController.swift in Sources */,
+				80605B6B28200457004126C2 /* ReportViewController.swift in Sources */,
+				8073ED5D28913671009513BE /* Constant.swift in Sources */,
+				80C6AA6F285C54060008E656 /* SampleListViewController.swift in Sources */,
+				80AB29322858A068009002F6 /* OrderViewController.swift in Sources */,
+				80605B6F2821141A004126C2 /* SchoolViewController.swift in Sources */,
+				80ABA7512859FF5F00AAEE4A /* OTPViewController.swift in Sources */,
+				807C637F285C683900D556A5 /* IndividualViewController.swift in Sources */,
+				80605B712821142E004126C2 /* PartyViewController.swift in Sources */,
+				806D14882822924C00631219 /* AddPartyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +660,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5DY39F2BR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Gurukul Publications/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -596,6 +693,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5DY39F2BR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Gurukul Publications/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

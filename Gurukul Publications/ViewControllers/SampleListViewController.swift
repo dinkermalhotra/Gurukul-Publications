@@ -11,17 +11,23 @@ class SampleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Sample List"
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        let submitButton = UIBarButtonItem(title: "Submit",  style: .plain, target: self, action: #selector(didTapsubmitButton(sender:)))
-        navigationItem.rightBarButtonItems = [submitButton]
+        setupUI()
+      
+    }
+    
+    func setupUI(){
         primaryView.alpha = 1
         individualView.alpha = 0
         groupView.alpha = 0
         segmentControl.setupSegment()
     }
     
-    @objc func didTapsubmitButton(sender: AnyObject){
+    @IBAction func backbtnClicked(_ sender: UIBarButtonItem)
+    {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func submitBtnClicked(_ sender: UIBarButtonItem) {
         
     }
     
