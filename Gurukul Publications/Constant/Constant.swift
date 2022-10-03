@@ -23,11 +23,21 @@ let NO = "NO"
 let Number_of_school = "Enter no. of school"
 let Number_of_party = "Enter no. of party"
 let OK = "OK"
+let user_pswd = "Please enter password"
 let Select_concern = "Select concern"
 let Select_concern_person = "Please select concern person"
 let Select_date = "Please select date"
+let user_name = "Please enter username"
+let user_Id = "userId"
 let Warning = "Warning"
 let YES = "YES"
+
+struct API_NAME {
+    
+    static let shared = API_NAME()
+    let base_url = "https://gurukulpublications.org/admin/index.php/app_control/"
+    let login = "userLogin"
+}
 
 
 struct  STORYBOARDS_ID
@@ -42,7 +52,7 @@ struct  STORYBOARDS_ID
     static let REPORT_VIEW_VC = "ReportViewController"
     static let SAMPLE_LIST_VC = "SampleListViewController"
     static let SELECTION_COMMITTEE_VC = "SelectionCommitteeViewController"
-    
+    static let SIGNIN_VC = "SignInViewController"
 }
 
 struct CELLINDENTIFIRES_ID
@@ -50,6 +60,21 @@ struct CELLINDENTIFIRES_ID
     static let GROUP_VIEW_CELL = "GroupViewControllerCell"
     static let INDIVIDUAL_VIEW_CELL = "IndividualViewControllerCell"
     static let PRIMARY_VIEW_CEll = "PrimaryViewControllerCell"
-   
+    
 }
 
+struct WebConstants {
+    static let EMAIL = "email"
+    static let FULL_NAME = "fullname"
+    static let ID = "id"
+    static let MESSAGE = "message"
+    static let NAME = "name"
+    static let PHONE = "phone"
+    static let RESPONSE = "response"
+    static let ROLE = "role"
+    static let USER_TYPE = "user_type"
+    static let STATUS = "status"
+    
+    
+    
+}

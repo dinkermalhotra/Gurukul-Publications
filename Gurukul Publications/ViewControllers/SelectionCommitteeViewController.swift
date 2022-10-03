@@ -64,7 +64,7 @@ class SelectionCommitteeViewController: UIViewController,UINavigationControllerD
             self?.remarksTxt.isHidden = false
             self?.remarksView.isHidden = false
             self?.cameraBtn.isHidden = false
-            self?.submitBtnTop.constant = 355
+            self?.submitBtnTop.constant = 360
         }
     }
     

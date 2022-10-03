@@ -13,6 +13,8 @@ class PaymentViewController: UIViewController {
     @IBOutlet weak var mobileNoView: UIView!
     @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var resonView: UIView!
+    var selectedButton = 0
+    var selectedReturnButtons = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,73 +36,69 @@ class PaymentViewController: UIViewController {
     
     @IBAction func checkBoxesAction(_ sender: UIButton)
     {
-        let button  = sender as UIButton
         
-        for i in 0...4
+        let tag = sender.tag
+        checkBoxArray[selectedButton].isSelected = false
+        checkBoxArray[tag].isSelected = true
+        selectedButton = tag
+        
+        if selectedButton == 0
         {
-            let btn = button.viewWithTag(i) as? UIButton
-            
-            if btn?.tag == i
-            {
-                btn?.isSelected = true
-                if btn?.tag == 0{
-                    
-                    checkAmountView.isHidden = true
-                    chequeNumberView.isHidden = true
-                    resonView.isHidden = true
-                    nameView.isHidden = false
-                    mobileNoView.isHidden = false
-                    emailView.isHidden = false
-                    amountView.isHidden = false
-                }
-                else  if btn?.tag == 1{
-                    
-                    chequeNumberView.isHidden = false
-                    nameView.isHidden = false
-                    mobileNoView.isHidden = false
-                    emailView.isHidden = false
-                    amountView.isHidden = false
-                    checkAmountView.isHidden = true
-                    resonView.isHidden = true
-                    
-                }
-                else  if btn?.tag == 2{
-                    
-                    chequeNumberView.isHidden = false
-                    checkAmountView.isHidden = false
-                    nameView.isHidden = false
-                    mobileNoView.isHidden = false
-                    emailView.isHidden = false
-                    amountView.isHidden = false
-                    resonView.isHidden = true
-                    
-                }
-                else  if btn?.tag == 3{
-                    chequeNumberView.isHidden = true
-                    checkAmountView.isHidden = true
-                    resonView.isHidden = true
-                    nameView.isHidden = false
-                    mobileNoView.isHidden = false
-                    emailView.isHidden = false
-                    amountView.isHidden = false
-                }
-                else  if btn?.tag == 4{
-                    
-                    chequeNumberView.isHidden = true
-                    checkAmountView.isHidden = true
-                    nameView.isHidden = true
-                    mobileNoView.isHidden = true
-                    emailView.isHidden = true
-                    amountView.isHidden = true
-                    resonView.isHidden = false
-                    
-                }
-            }
-            else
-            {
-                btn?.isSelected = false
-            }
+
+            checkAmountView.isHidden = true
+            chequeNumberView.isHidden = true
+            resonView.isHidden = true
+            nameView.isHidden = false
+            mobileNoView.isHidden = false
+            emailView.isHidden = false
+            amountView.isHidden = false
         }
+        else if selectedButton == 1
+        {
+            chequeNumberView.isHidden = false
+            nameView.isHidden = false
+            mobileNoView.isHidden = false
+            emailView.isHidden = false
+            amountView.isHidden = false
+            checkAmountView.isHidden = true
+            resonView.isHidden = true
+
+        }
+        else if selectedButton == 2
+        {
+
+            chequeNumberView.isHidden = false
+            checkAmountView.isHidden = false
+            nameView.isHidden = false
+            mobileNoView.isHidden = false
+            emailView.isHidden = false
+            amountView.isHidden = false
+            resonView.isHidden = true
+
+        }
+        else if selectedButton == 3
+        {
+            chequeNumberView.isHidden = true
+            checkAmountView.isHidden = true
+            resonView.isHidden = true
+            nameView.isHidden = false
+            mobileNoView.isHidden = false
+            emailView.isHidden = false
+            amountView.isHidden = false
+        }
+        else if selectedButton == 4
+        {
+
+            chequeNumberView.isHidden = true
+            checkAmountView.isHidden = true
+            nameView.isHidden = true
+            mobileNoView.isHidden = true
+            emailView.isHidden = true
+            amountView.isHidden = true
+            resonView.isHidden = false
+
+        }
+
     }
     
     

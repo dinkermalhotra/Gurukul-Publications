@@ -16,12 +16,15 @@ class HomeViewController: UIViewController {
     }
     
     
-    func setupUI(){
+    func setupUI()
+    {
         partyView.alpha = 0
         schoolView.alpha = 1
         expensesView.alpha = 0
         segmentControl.setupSegment()
-      
+        self.navigationItem.setHidesBackButton(true, animated: true)
+
+        
     }
    
     @IBAction func reportBtnClicked(_ sender: UIBarButtonItem) {
@@ -32,15 +35,17 @@ class HomeViewController: UIViewController {
     
     @IBAction func LogoutBtnClicked(_ sender: UIBarButtonItem) {
         showOKCancelAlertWithCompletion(onVC: self, title: Confirmation, message: Alert_msg, btnOkTitle: YES, btnCancelTitle: NO, onOk: {
-            
+            self.logOut()
         }, onCancel: {
             
         })
         
     }
-    
-    @IBAction func backBtnClicked(_ sender: UIBarButtonItem) {
-        navigationController?.popViewController(animated: true)
+    func logOut(){
+        UserDefaults.standard.removeObject(forKey: user_Id)
+        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.SIGNIN_VC) as! SignInViewController
+        let navigationController = UINavigationController(rootViewController: loginViewController)
+        UIApplication.shared.keyWindow?.rootViewController = navigationController
     }
     
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {

@@ -12,7 +12,7 @@ class OTPViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        startTimer()
     }
     
     @IBAction func backBtnClicked(_ sender: UIBarButtonItem)
@@ -26,7 +26,8 @@ class OTPViewController: UIViewController {
         
     }
     
-    @IBAction func resendOtpAction(_ sender: UIButton) {
+    @IBAction func resendOtpAction(_ sender: UIButton)
+    {
         
         startTimer()
         

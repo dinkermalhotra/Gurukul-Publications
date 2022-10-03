@@ -1,18 +1,21 @@
 
 import UIKit
 
-class SchoolViewController: UIViewController {
+class SchoolViewController: UIViewController
+{
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var nextBtn: UIButton!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         self.dateField.setInputViewDatePicker(target: self, selector: #selector(tapDone))
-        
     }
-    @objc func tapDone() {
+    
+    @objc func tapDone()
+    {
         if let datePicker = self.dateField.inputView as? UIDatePicker {
             let dateformatter = DateFormatter()
             dateformatter.dateStyle = .medium
@@ -22,7 +25,8 @@ class SchoolViewController: UIViewController {
         self.dateField.resignFirstResponder()
     }
     
-    @IBAction func nextBtnAction(_ sender: Any) {
+    @IBAction func nextBtnAction(_ sender: Any)
+    {
         if (dateField.text?.isEmpty)!
         {
             alertModule(onVC: self, title: Alert, msg: Select_date)

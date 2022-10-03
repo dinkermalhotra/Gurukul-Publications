@@ -82,7 +82,7 @@ extension UISegmentedControl{
       } else {
         bgcolor = UIColor.white.cgColor
         textColorNormal = UIColor.black
-        textColorSelected = UIColor(red: 136, green: 0, blue: 155, alpha: 1.0)
+        textColorSelected = #colorLiteral(red: 0.9254901961, green: 0, blue: 0.5490196078, alpha: 1)
       }
       
       let backgroundImage = UIImage.getColoredRectImageWith(color: bgcolor, andSize: self.bounds.size)
@@ -113,7 +113,7 @@ extension UISegmentedControl{
         let underLineYPosition = self.bounds.size.height - 4.0
         let underlineFrame = CGRect(x: underlineXPosition, y: underLineYPosition, width: underlineWidth, height: underlineHeight)
         let underline = UIView(frame: underlineFrame)
-        underline.backgroundColor =  UIColor(red: 136, green: 0, blue: 155, alpha: 1.0)
+        underline.backgroundColor =  #colorLiteral(red: 0.9254901961, green: 0, blue: 0.5490196078, alpha: 1)
         underline.tag = 1
         self.addSubview(underline)
         
@@ -150,18 +150,6 @@ extension UISegmentedControl{
 
 extension UINavigationController {
 
-    func setStatusBar(backgroundColor: UIColor) {
-        let statusBarFrame: CGRect
-        if #available(iOS 13.0, *) {
-            statusBarFrame = view.window?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero
-        } else {
-            statusBarFrame = UIApplication.shared.statusBarFrame
-        }
-        let statusBarView = UIView(frame: statusBarFrame)
-        statusBarView.backgroundColor = backgroundColor
-        view.addSubview(statusBarView)
-    }
-    
     func popToViewController(ofClass: AnyClass, animated: Bool = true) {
       if let vc = viewControllers.last(where: { $0.isKind(of: ofClass) }) {
         popToViewController(vc, animated: animated)
@@ -191,3 +179,26 @@ func showOKCancelAlertWithCompletion(onVC viewController: UIViewController, titl
         viewController.present(alert, animated: true, completion: nil)
     }
 }
+extension UIViewController {
+    class func displaySpinner(onView : UIView) -> UIView {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        return spinnerView
+    }
+    
+    class func removeSpinner(spinner :UIView) {
+        DispatchQueue.main.async {
+            spinner.removeFromSuperview()
+        }
+    }
+}
+
