@@ -11,7 +11,7 @@ class CircularView: UIView {
     }
 }
 
-// MARK: - UIVIEW EXTENSION
+//MARK: - UIVIEW EXTENSION --
 extension UIView {
     @IBInspectable var borderWidth: CGFloat {
         get {
