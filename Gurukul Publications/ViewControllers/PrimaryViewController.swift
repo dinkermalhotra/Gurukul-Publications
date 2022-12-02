@@ -23,10 +23,5 @@ class PrimaryViewController: UIViewController,UITableViewDelegate,UITableViewDat
         cell.bgView.layer.borderWidth = 0.2
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CELLINDENTIFIRES_ID.PRIMARY_VIEW_CEll, for: indexPath) as! PrimaryViewControllerCell
-        let indexPath = indexPath.row
-        print(indexPath)
-      
-    }
+  
 }

@@ -7,4 +7,7 @@ target 'Gurukul Publications' do
     pod "SearchTextField"
     pod 'GrowingTextView', '0.7.2'
     pod 'DropDown'
+    pod 'Alamofire', '~> 4.8.0'
+    pod 'AlamofireObjectMapper', '~> 5.2'
+    pod 'SDWebImage'
 end

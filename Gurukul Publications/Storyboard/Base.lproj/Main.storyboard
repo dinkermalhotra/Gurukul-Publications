@@ -3431,7 +3431,18 @@
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1150"/>
                     <connections>
+                        <outlet property="areaTxt" destination="2Au-ys-dor" id="FCF-8j-5Mx"/>
+                        <outlet property="discountTxt" destination="wzi-MT-V3E" id="dyX-Qg-HjM"/>
+                        <outlet property="districtTxt" destination="oNN-yX-V9m" id="Mzz-3N-kE9"/>
+                        <outlet property="emailTxt" destination="PUs-wV-c77" id="hPS-kR-cvd"/>
+                        <outlet property="etdTxt" destination="Eyr-L1-vT1" id="Cjp-g2-3RU"/>
+                        <outlet property="partyAddressTxt" destination="53g-kc-xz2" id="cQC-8a-8Yr"/>
+                        <outlet property="partyMobileTxt" destination="veB-NJ-Gb5" id="erI-Y0-Vx3"/>
+                        <outlet property="partyNameTxt" destination="ch5-t7-JcF" id="PiM-eu-eR6"/>
+                        <outlet property="partyPhoneTxt" destination="Dph-sf-juM" id="QrO-xw-7DS"/>
+                        <outlet property="pincodeTxt" destination="xa2-gx-my9" id="4Pz-GW-vE9"/>
                         <outlet property="remarksView" destination="0Dq-Qo-99k" id="qYa-aZ-QUT"/>
+                        <outlet property="stateTxt" destination="aHk-Op-YY8" id="R7E-rt-JaB"/>
                         <outletCollection property="partyCategory" destination="OGN-DG-0fV" collectionClass="NSMutableArray" id="J3O-fP-9Ti"/>
                         <outletCollection property="partyCategory" destination="4TB-w9-rnM" collectionClass="NSMutableArray" id="Y0m-un-R6g"/>
                         <outletCollection property="partyCategory" destination="9oa-OT-9hi" collectionClass="NSMutableArray" id="nzV-kz-8pR"/>
@@ -4172,12 +4183,21 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="1aP-iM-B22">
+                                                            <rect key="frame" x="319" y="22.5" width="24" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="24" id="CQz-yK-oE2"/>
+                                                                <constraint firstAttribute="height" constant="24" id="YWe-1y-GkA"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="rjO-qJ-g9z" firstAttribute="top" secondItem="BBg-9f-CJY" secondAttribute="top" constant="12" id="3ZP-p6-7qB"/>
                                                         <constraint firstItem="rjO-qJ-g9z" firstAttribute="leading" secondItem="BBg-9f-CJY" secondAttribute="leading" constant="8" id="7QM-hP-mMr"/>
                                                         <constraint firstAttribute="bottom" secondItem="rjO-qJ-g9z" secondAttribute="bottom" constant="11" id="RZ5-ao-eFX"/>
                                                         <constraint firstAttribute="height" constant="65" id="XDr-vW-1ST"/>
+                                                        <constraint firstItem="1aP-iM-B22" firstAttribute="centerY" secondItem="rjO-qJ-g9z" secondAttribute="centerY" id="abH-Qa-BTu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1aP-iM-B22" secondAttribute="trailing" constant="16" id="tvJ-zO-t4i"/>
                                                         <constraint firstAttribute="trailing" secondItem="rjO-qJ-g9z" secondAttribute="trailing" constant="8" id="zma-IY-vvH"/>
                                                     </constraints>
                                                 </view>
@@ -4192,6 +4212,7 @@
                                         <color key="backgroundColor" white="1" alpha="0.89965496950000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="bgView" destination="BBg-9f-CJY" id="i5I-3H-pgO"/>
+                                            <outlet property="checkMarkImg" destination="1aP-iM-B22" id="pi4-MI-Zcl"/>
                                             <outlet property="nameTxt" destination="rjO-qJ-g9z" id="T87-c9-cX1"/>
                                         </connections>
                                     </tableViewCell>
@@ -4217,7 +4238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XtS-2l-JNk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6220" y="1403"/>
+            <point key="canvasLocation" x="6220" y="1402.3988005997003"/>
         </scene>
         <!--Selection Committee-->
         <scene sceneID="osd-Ik-jty">

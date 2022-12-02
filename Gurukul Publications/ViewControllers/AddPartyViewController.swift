@@ -1,17 +1,31 @@
 
 import UIKit
 import GrowingTextView
-class AddPartyViewController: UIViewController,UITextViewDelegate {
+import DropDown
+class AddPartyViewController: UIViewController,UITextViewDelegate,UITextFieldDelegate {
 
     @IBOutlet weak var remarksView: GrowingTextView!
     @IBOutlet var partyCategory: [UIButton]!
+    @IBOutlet weak var stateTxt: UITextField!
+    @IBOutlet weak var districtTxt: UITextField!
+    @IBOutlet weak var areaTxt: UITextField!
+    @IBOutlet weak var partyNameTxt: UITextField!
+    @IBOutlet weak var partyAddressTxt: UITextField!
+    @IBOutlet weak var pincodeTxt: UITextField!
+    @IBOutlet weak var partyPhoneTxt: UITextField!
+    @IBOutlet weak var partyMobileTxt: UITextField!
+    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var discountTxt: UITextField!
+    @IBOutlet weak var etdTxt: UITextField!
     
     var selectedButton = 0
-    
+    let dropDownMenu = DropDown()
     override func viewDidLoad()
     {
         super.viewDidLoad()
         setupUI()
+        stateTxt.delegate = self
+        
       
     }
     
@@ -46,6 +60,22 @@ class AddPartyViewController: UIViewController,UITextViewDelegate {
         vc.receivedString = "false"
         navigationController?.pushViewController(vc,animated: true)
         
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        dropDownMenu.dataSource = ["Coordinator", "Principle", "Director", "Librarian","Vice Principle","Subject Teacher","Others"]
+        dropDownMenu.anchorView = stateTxt
+        dropDownMenu.bottomOffset = CGPoint(x: 0, y: (stateTxt as AnyObject).frame.size.height)
+        dropDownMenu.show()
+        dropDownMenu.backgroundColor = .white
+        dropDownMenu.selectionAction = { [weak self] (index: Int, item: String) in
+            
+            guard let _ = self else { return}
+            self!.stateTxt.text = item
+        
+    }
+        return true
     }
     
 }

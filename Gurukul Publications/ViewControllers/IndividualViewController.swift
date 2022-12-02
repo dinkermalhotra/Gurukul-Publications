@@ -25,10 +25,4 @@ class IndividualViewController: UIViewController,UITableViewDelegate,UITableView
         return cell
         
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CELLINDENTIFIRES_ID.INDIVIDUAL_VIEW_CELL, for: indexPath) as! IndividualViewControllerCell
-        
-       
-    }
-    
 }
