@@ -17,6 +17,7 @@ class Login: Mappable, CustomStringConvertible {
         role <- map[WebConstants.ROLE]
         fullname <- map[WebConstants.FULL_NAME]
         user_type <- map[WebConstants.USER_TYPE]
+        
     }
     
     var description: String {
