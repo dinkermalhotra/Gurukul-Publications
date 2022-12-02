@@ -14,6 +14,8 @@
 		80605B712821142E004126C2 /* PartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80605B702821142E004126C2 /* PartyViewController.swift */; };
 		806D14882822924C00631219 /* AddPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D14872822924C00631219 /* AddPartyViewController.swift */; };
 		806D148A2823829A00631219 /* SelectionCommitteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D14892823829A00631219 /* SelectionCommitteeViewController.swift */; };
+		8071D39328928D1300E91BDC /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071D39228928D1300E91BDC /* WebServices.swift */; };
+		8071D39628928E3F00E91BDC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071D39528928E3F00E91BDC /* Login.swift */; };
 		8073ED5D28913671009513BE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8073ED5C28913671009513BE /* Constant.swift */; };
 		807C637D285C681800D556A5 /* PrimaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C637C285C681800D556A5 /* PrimaryViewController.swift */; };
 		807C637F285C683900D556A5 /* IndividualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C637E285C683900D556A5 /* IndividualViewController.swift */; };
@@ -66,6 +68,8 @@
 		80605B702821142E004126C2 /* PartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewController.swift; sourceTree = "<group>"; };
 		806D14872822924C00631219 /* AddPartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPartyViewController.swift; sourceTree = "<group>"; };
 		806D14892823829A00631219 /* SelectionCommitteeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCommitteeViewController.swift; sourceTree = "<group>"; };
+		8071D39228928D1300E91BDC /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		8071D39528928E3F00E91BDC /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		8073ED5C28913671009513BE /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		807C637C285C681800D556A5 /* PrimaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryViewController.swift; sourceTree = "<group>"; };
 		807C637E285C683900D556A5 /* IndividualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8071D39128928A8300E91BDC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8071D39228928D1300E91BDC /* WebServices.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		8071D39428928E2600E91BDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8071D39528928E3F00E91BDC /* Login.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		807C6383285C6A9100D556A5 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +197,8 @@
 		80B02748281BDF1900B008D3 /* Gurukul Publications */ = {
 			isa = PBXGroup;
 			children = (
+				8071D39428928E2600E91BDC /* Model */,
+				8071D39128928A8300E91BDC /* Helper */,
 				80B02783281BE89200B008D3 /* OtherClasses */,
 				80828FE82886AFD70079C0EC /* Constant */,
 				80B02779281BDF9000B008D3 /* Delegate */,
@@ -471,9 +493,11 @@
 				80B0278E281BED7D00B008D3 /* SignInViewController.swift in Sources */,
 				806D148A2823829A00631219 /* SelectionCommitteeViewController.swift in Sources */,
 				80B0278A281BE94A00B008D3 /* UIView+Extension.swift in Sources */,
+				8071D39628928E3F00E91BDC /* Login.swift in Sources */,
 				80B02790281C0D1F00B008D3 /* HomeViewController.swift in Sources */,
 				80605B6B28200457004126C2 /* ReportViewController.swift in Sources */,
 				8073ED5D28913671009513BE /* Constant.swift in Sources */,
+				8071D39328928D1300E91BDC /* WebServices.swift in Sources */,
 				80C6AA6F285C54060008E656 /* SampleListViewController.swift in Sources */,
 				80AB29322858A068009002F6 /* OrderViewController.swift in Sources */,
 				80605B6F2821141A004126C2 /* SchoolViewController.swift in Sources */,
@@ -663,6 +687,7 @@
 				DEVELOPMENT_TEAM = T5DY39F2BR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Gurukul Publications/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app use camera to add image";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -696,6 +721,7 @@
 				DEVELOPMENT_TEAM = T5DY39F2BR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Gurukul Publications/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app use camera to add image";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
