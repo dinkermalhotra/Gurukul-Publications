@@ -10,4 +10,7 @@ target 'Gurukul Publications' do
     pod 'Alamofire', '~> 4.8.0'
     pod 'AlamofireObjectMapper', '~> 5.2'
     pod 'SDWebImage'
+    pod 'SwiftyJSON', '~> 4.0'
+    pod "ToastViewSwift"
+    pod 'Toaster'
 end

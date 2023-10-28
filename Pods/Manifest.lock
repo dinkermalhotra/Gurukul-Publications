@@ -11,6 +11,9 @@ PODS:
     - SDWebImage/Core (= 5.13.2)
   - SDWebImage/Core (5.13.2)
   - SearchTextField (1.2.4)
+  - SwiftyJSON (4.3.0)
+  - Toaster (2.3.0)
+  - ToastViewSwift (2.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.0)
@@ -20,6 +23,9 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - SDWebImage
   - SearchTextField
+  - SwiftyJSON (~> 4.0)
+  - Toaster
+  - ToastViewSwift
 
 SPEC REPOS:
   trunk:
@@ -31,6 +37,9 @@ SPEC REPOS:
     - ObjectMapper
     - SDWebImage
     - SearchTextField
+    - SwiftyJSON
+    - Toaster
+    - ToastViewSwift
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -41,7 +50,10 @@ SPEC CHECKSUMS:
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
   SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+  ToastViewSwift: db710ad3c19c826269d004038c7b69f5b658dc6f
 
-PODFILE CHECKSUM: 3cba8d90be144af8247e991891d73b2700f52d99
+PODFILE CHECKSUM: df9cb6f15aa9a36c5aca549d463c897dc0e40e5e
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1

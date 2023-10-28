@@ -4,6 +4,7 @@ import UIKit
 class IndividualViewControllerCell: UITableViewCell {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var nameTxt: UILabel!
+    @IBOutlet weak var priceTxt: UILabel!
     @IBOutlet weak var checkMarkImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -10,7 +10,8 @@ class SignInViewController: UIViewController {
     var loginData = [Login]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //self.userName.text = "support@lenapo.com"
+        //self.password.text = "Test@123"
         // Do any additional setup after loading the view.
     }
     
@@ -45,7 +46,8 @@ class SignInViewController: UIViewController {
     }
     
     func loginApi(){
-        let vc = SignInViewController.displaySpinner(onView: self.view)
+        //let vc = SignInViewController.displaySpinner(onView: self.view)
+        displaySpinner()
         
         let params: [String: AnyObject] = ["email" : userName.text as AnyObject,
                                        "password" : password.text as AnyObject]
@@ -58,14 +60,17 @@ class SignInViewController: UIViewController {
                 let userId = self.loginData[0].id
                 let userdef = UserDefaults.standard
                 userdef.set(userId, forKey: user_Id)
-               
+                
+                removeSpinner()
+                
                 self.pushToHomeVC()
-                SignInViewController.removeSpinner(spinner: vc)
+               
                 
             }
             else{
+                removeSpinner()
                 alertModule(onVC: self, title: Alert, msg: message)
-                SignInViewController.removeSpinner(spinner: vc)
+                
             }
             
         }

@@ -42,10 +42,24 @@ class HomeViewController: UIViewController {
         
     }
     func logOut(){
+       
         UserDefaults.standard.removeObject(forKey: user_Id)
+        UserDefaults.standard.removeObject(forKey: LOGGIN_ID)
+        UserDefaults.standard.removeObject(forKey: SCHOOL_ID)
+        UserDefaults.standard.removeObject(forKey: PARTY_ID)
+        resetDefaults()
         let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.SIGNIN_VC) as! SignInViewController
         let navigationController = UINavigationController(rootViewController: loginViewController)
         UIApplication.shared.keyWindow?.rootViewController = navigationController
+    }
+    
+    
+    func resetDefaults() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: key)
+        }
     }
     
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {

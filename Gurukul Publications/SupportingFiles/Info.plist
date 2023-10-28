@@ -22,8 +22,16 @@
 		</dict>
 	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app requires to access library for uploading images</string>
+	<string>This app requires to access photo library for uploading images</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app requires to access camera for uploading images</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow Gurukul to access current location for tracking</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow Gurukul to access current location for tracking</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Allow Gurukul to access current location for tracking</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 </dict>
 </plist>

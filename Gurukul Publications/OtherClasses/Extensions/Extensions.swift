@@ -1,4 +1,5 @@
 import UIKit
+import Toaster
 
 //MARK: String 
 extension String {
@@ -156,6 +157,11 @@ extension UINavigationController {
       }
     }
 }
+
+func showToast(message:String){
+    Toast(text: message).show()
+}
+
 func alertModule(onVC viewController: UIViewController,title:String,msg:String){
        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
        let alertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.destructive, handler: {(alert : UIAlertAction!) in
@@ -179,26 +185,57 @@ func showOKCancelAlertWithCompletion(onVC viewController: UIViewController, titl
         viewController.present(alert, animated: true, completion: nil)
     }
 }
-extension UIViewController {
-    class func displaySpinner(onView : UIView) -> UIView {
-        let spinnerView = UIView.init(frame: onView.bounds)
-        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
-        ai.startAnimating()
-        ai.center = spinnerView.center
-        
-        DispatchQueue.main.async {
-            spinnerView.addSubview(ai)
-            onView.addSubview(spinnerView)
-        }
-        
-        return spinnerView
+
+func showYesNoAlertWithCompletion(onVC viewController: UIViewController, title: String, message: String, btnOkTitle: String, btnCancelTitle: String, onOk: @escaping ()->()) {
+    DispatchQueue.main.async {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: btnOkTitle, style:.default, handler: { (action:UIAlertAction) in
+            onOk()
+        }))
+        alert.addAction(UIAlertAction(title: btnCancelTitle, style:.default, handler: nil))
+        alert.view.tintColor = UIColor.black
+        alert.view.setNeedsLayout()
+        viewController.present(alert, animated: true, completion: nil)
     }
     
-    class func removeSpinner(spinner :UIView) {
-        DispatchQueue.main.async {
-            spinner.removeFromSuperview()
-        }
+    
+}
+
+func displaySpinner(){
+    DispatchQueue.main.async {
+        SKActivityIndicator.show("", userInteractionStatus: false)
     }
 }
+
+
+func removeSpinner() {
+    DispatchQueue.main.async {
+        SKActivityIndicator.dismiss()
+    }
+}
+
+//extension UIViewController {
+//    class func displaySpinner(onView : UIView) {
+////        let spinnerView = UIView.init(frame: onView.bounds)
+////        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+////        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+////        ai.startAnimating()
+////        ai.center = spinnerView.center
+////
+//        DispatchQueue.main.async {
+//            //spinnerView.addSubview(ai)
+//            //onView.addSubview(spinnerView)
+//        }
+////
+////        return spinnerView
+//
+//    }
+//
+//    class func removeSpinner(spinner :UIView) {
+//        DispatchQueue.main.async {
+//            spinner.removeFromSuperview()
+//
+//        }
+//    }
+//}
 

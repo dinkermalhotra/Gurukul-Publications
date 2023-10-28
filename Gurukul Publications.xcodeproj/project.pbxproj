@@ -7,6 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A22C6EC2AD2FBE300C8BC8C /* SKActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22C6EA2AD2FBE300C8BC8C /* SKActivityIndicatorViewStyle.swift */; };
+		5A22C6ED2AD2FBE300C8BC8C /* SKActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22C6EB2AD2FBE300C8BC8C /* SKActivityIndicatorView.swift */; };
+		5A22C6F02AD3125500C8BC8C /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22C6EE2AD3125500C8BC8C /* TeacherTableViewCell.swift */; };
+		5A22C6F12AD3125500C8BC8C /* TeacherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A22C6EF2AD3125500C8BC8C /* TeacherTableViewCell.xib */; };
+		5A22C6F42AD336EE00C8BC8C /* FooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22C6F22AD336EE00C8BC8C /* FooterTableViewCell.swift */; };
+		5A22C6F52AD336EE00C8BC8C /* FooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A22C6F32AD336EE00C8BC8C /* FooterTableViewCell.xib */; };
+		5A3381082AB2223600B1A22E /* SelectedBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3381072AB2223600B1A22E /* SelectedBookViewController.swift */; };
+		5A39CAF22AC089AB0094E9AA /* SelectedBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A39CAF12AC089AB0094E9AA /* SelectedBooks.swift */; };
+		5A3FC1362AAB8E14002A3D06 /* StateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FC1352AAB8E14002A3D06 /* StateData.swift */; };
+		5A41C36F2AC8A43F005CD64C /* SelectionCommitteePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C36E2AC8A43F005CD64C /* SelectionCommitteePartyViewController.swift */; };
+		5A41C3712AC8A70A005CD64C /* PartyPurposeOfVisitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C3702AC8A70A005CD64C /* PartyPurposeOfVisitVC.swift */; };
+		5A41C3732AC8A8D5005CD64C /* PartySampleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C3722AC8A8D5005CD64C /* PartySampleListVC.swift */; };
+		5A41C3752AC8AB88005CD64C /* PartyPrimaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C3742AC8AB88005CD64C /* PartyPrimaryViewController.swift */; };
+		5A41C3772AC8ABA7005CD64C /* PartyIndividualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C3762AC8ABA7005CD64C /* PartyIndividualViewController.swift */; };
+		5A41C3792AC8ABC4005CD64C /* PartyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C3782AC8ABC4005CD64C /* PartyGroupViewController.swift */; };
+		5A41C37B2AC8AD72005CD64C /* PartySelectedBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C37A2AC8AD72005CD64C /* PartySelectedBookVC.swift */; };
+		5A41C37D2AC8AEEB005CD64C /* PartyOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C37C2AC8AEEB005CD64C /* PartyOrderViewController.swift */; };
+		5A41C37F2AC8AF00005CD64C /* PartyPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C37E2AC8AF00005CD64C /* PartyPaymentViewController.swift */; };
+		5A41C3812AC8AF1A005CD64C /* PartyOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C3802AC8AF1A005CD64C /* PartyOTPViewController.swift */; };
+		5A48E3B02ACDD987007B76E7 /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48E3AE2ACDD987007B76E7 /* SchoolTableViewCell.swift */; };
+		5A48E3B12ACDD987007B76E7 /* SchoolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A48E3AF2ACDD987007B76E7 /* SchoolTableViewCell.xib */; };
+		5A48E3B42ACDD99D007B76E7 /* PartyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48E3B22ACDD99D007B76E7 /* PartyTableViewCell.swift */; };
+		5A48E3B52ACDD99D007B76E7 /* PartyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A48E3B32ACDD99D007B76E7 /* PartyTableViewCell.xib */; };
+		5A68C7BF2AC4A32A0052F758 /* SearchSchoolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A68C7BE2AC4A3290052F758 /* SearchSchoolData.swift */; };
+		5A68C7C12AC4B3DB0052F758 /* PartyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A68C7C02AC4B3DB0052F758 /* PartyData.swift */; };
+		5A75ADC92AB0D62900EF9D25 /* PrimarySchoolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75ADC82AB0D62900EF9D25 /* PrimarySchoolData.swift */; };
+		5A75ADCB2AB0DCC900EF9D25 /* GroupBookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75ADCA2AB0DCC900EF9D25 /* GroupBookData.swift */; };
+		5A75ADCD2AB0DD4C00EF9D25 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75ADCC2AB0DD4C00EF9D25 /* DataItem.swift */; };
+		5A82499E2AC7430D009E7813 /* OTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A82499D2AC7430D009E7813 /* OTPResponse.swift */; };
 		801538AD282273CD00DB4106 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801538AC282273CD00DB4106 /* FormViewController.swift */; };
 		80605B6B28200457004126C2 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80605B6A28200457004126C2 /* ReportViewController.swift */; };
 		80605B6D28210162004126C2 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80605B6C28210162004126C2 /* ExpensesViewController.swift */; };
@@ -61,6 +90,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A22C6EA2AD2FBE300C8BC8C /* SKActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
+		5A22C6EB2AD2FBE300C8BC8C /* SKActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKActivityIndicatorView.swift; sourceTree = "<group>"; };
+		5A22C6EE2AD3125500C8BC8C /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
+		5A22C6EF2AD3125500C8BC8C /* TeacherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeacherTableViewCell.xib; sourceTree = "<group>"; };
+		5A22C6F22AD336EE00C8BC8C /* FooterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTableViewCell.swift; sourceTree = "<group>"; };
+		5A22C6F32AD336EE00C8BC8C /* FooterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterTableViewCell.xib; sourceTree = "<group>"; };
+		5A3381072AB2223600B1A22E /* SelectedBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBookViewController.swift; sourceTree = "<group>"; };
+		5A39CAF12AC089AB0094E9AA /* SelectedBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBooks.swift; sourceTree = "<group>"; };
+		5A3FC1352AAB8E14002A3D06 /* StateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateData.swift; sourceTree = "<group>"; };
+		5A41C36E2AC8A43F005CD64C /* SelectionCommitteePartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCommitteePartyViewController.swift; sourceTree = "<group>"; };
+		5A41C3702AC8A70A005CD64C /* PartyPurposeOfVisitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPurposeOfVisitVC.swift; sourceTree = "<group>"; };
+		5A41C3722AC8A8D5005CD64C /* PartySampleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySampleListVC.swift; sourceTree = "<group>"; };
+		5A41C3742AC8AB88005CD64C /* PartyPrimaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPrimaryViewController.swift; sourceTree = "<group>"; };
+		5A41C3762AC8ABA7005CD64C /* PartyIndividualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyIndividualViewController.swift; sourceTree = "<group>"; };
+		5A41C3782AC8ABC4005CD64C /* PartyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyGroupViewController.swift; sourceTree = "<group>"; };
+		5A41C37A2AC8AD72005CD64C /* PartySelectedBookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartySelectedBookVC.swift; sourceTree = "<group>"; };
+		5A41C37C2AC8AEEB005CD64C /* PartyOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyOrderViewController.swift; sourceTree = "<group>"; };
+		5A41C37E2AC8AF00005CD64C /* PartyPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPaymentViewController.swift; sourceTree = "<group>"; };
+		5A41C3802AC8AF1A005CD64C /* PartyOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyOTPViewController.swift; sourceTree = "<group>"; };
+		5A48E3AE2ACDD987007B76E7 /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
+		5A48E3AF2ACDD987007B76E7 /* SchoolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolTableViewCell.xib; sourceTree = "<group>"; };
+		5A48E3B22ACDD99D007B76E7 /* PartyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyTableViewCell.swift; sourceTree = "<group>"; };
+		5A48E3B32ACDD99D007B76E7 /* PartyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartyTableViewCell.xib; sourceTree = "<group>"; };
+		5A68C7BE2AC4A3290052F758 /* SearchSchoolData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSchoolData.swift; sourceTree = "<group>"; };
+		5A68C7C02AC4B3DB0052F758 /* PartyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyData.swift; sourceTree = "<group>"; };
+		5A75ADC82AB0D62900EF9D25 /* PrimarySchoolData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimarySchoolData.swift; sourceTree = "<group>"; };
+		5A75ADCA2AB0DCC900EF9D25 /* GroupBookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBookData.swift; sourceTree = "<group>"; };
+		5A75ADCC2AB0DD4C00EF9D25 /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
+		5A82499D2AC7430D009E7813 /* OTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPResponse.swift; sourceTree = "<group>"; };
 		801538AC282273CD00DB4106 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		80605B6A28200457004126C2 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		80605B6C28210162004126C2 /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
@@ -138,9 +196,43 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5A41C36D2AC8A41C005CD64C /* partyvc */ = {
+			isa = PBXGroup;
+			children = (
+				5A41C36E2AC8A43F005CD64C /* SelectionCommitteePartyViewController.swift */,
+				5A41C3702AC8A70A005CD64C /* PartyPurposeOfVisitVC.swift */,
+				5A41C3722AC8A8D5005CD64C /* PartySampleListVC.swift */,
+				5A41C3742AC8AB88005CD64C /* PartyPrimaryViewController.swift */,
+				5A41C3762AC8ABA7005CD64C /* PartyIndividualViewController.swift */,
+				5A41C3782AC8ABC4005CD64C /* PartyGroupViewController.swift */,
+				5A41C37A2AC8AD72005CD64C /* PartySelectedBookVC.swift */,
+				5A41C37C2AC8AEEB005CD64C /* PartyOrderViewController.swift */,
+				5A41C37E2AC8AF00005CD64C /* PartyPaymentViewController.swift */,
+				5A41C3802AC8AF1A005CD64C /* PartyOTPViewController.swift */,
+			);
+			path = partyvc;
+			sourceTree = "<group>";
+		};
+		5A48E3AD2ACDD954007B76E7 /* ReportCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A48E3AE2ACDD987007B76E7 /* SchoolTableViewCell.swift */,
+				5A48E3AF2ACDD987007B76E7 /* SchoolTableViewCell.xib */,
+				5A48E3B22ACDD99D007B76E7 /* PartyTableViewCell.swift */,
+				5A48E3B32ACDD99D007B76E7 /* PartyTableViewCell.xib */,
+				5A22C6EE2AD3125500C8BC8C /* TeacherTableViewCell.swift */,
+				5A22C6EF2AD3125500C8BC8C /* TeacherTableViewCell.xib */,
+				5A22C6F22AD336EE00C8BC8C /* FooterTableViewCell.swift */,
+				5A22C6F32AD336EE00C8BC8C /* FooterTableViewCell.xib */,
+			);
+			path = ReportCell;
+			sourceTree = "<group>";
+		};
 		8071D39128928A8300E91BDC /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				5A22C6EB2AD2FBE300C8BC8C /* SKActivityIndicatorView.swift */,
+				5A22C6EA2AD2FBE300C8BC8C /* SKActivityIndicatorViewStyle.swift */,
 				8071D39228928D1300E91BDC /* WebServices.swift */,
 			);
 			path = Helper;
@@ -150,6 +242,14 @@
 			isa = PBXGroup;
 			children = (
 				8071D39528928E3F00E91BDC /* Login.swift */,
+				5A3FC1352AAB8E14002A3D06 /* StateData.swift */,
+				5A75ADC82AB0D62900EF9D25 /* PrimarySchoolData.swift */,
+				5A75ADCA2AB0DCC900EF9D25 /* GroupBookData.swift */,
+				5A75ADCC2AB0DD4C00EF9D25 /* DataItem.swift */,
+				5A39CAF12AC089AB0094E9AA /* SelectedBooks.swift */,
+				5A68C7BE2AC4A3290052F758 /* SearchSchoolData.swift */,
+				5A68C7C02AC4B3DB0052F758 /* PartyData.swift */,
+				5A82499D2AC7430D009E7813 /* OTPResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +297,7 @@
 		80B02748281BDF1900B008D3 /* Gurukul Publications */ = {
 			isa = PBXGroup;
 			children = (
+				5A48E3AD2ACDD954007B76E7 /* ReportCell */,
 				8071D39428928E2600E91BDC /* Model */,
 				8071D39128928A8300E91BDC /* Helper */,
 				80B02783281BE89200B008D3 /* OtherClasses */,
@@ -239,6 +340,7 @@
 		80B0277A281BDF9C00B008D3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5A41C36D2AC8A41C005CD64C /* partyvc */,
 				80B0278D281BED7D00B008D3 /* SignInViewController.swift */,
 				80605B6A28200457004126C2 /* ReportViewController.swift */,
 				80605B6E2821141A004126C2 /* SchoolViewController.swift */,
@@ -256,6 +358,7 @@
 				80605B702821142E004126C2 /* PartyViewController.swift */,
 				80B0278F281C0D1F00B008D3 /* HomeViewController.swift */,
 				80605B6C28210162004126C2 /* ExpensesViewController.swift */,
+				5A3381072AB2223600B1A22E /* SelectedBookViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -409,9 +512,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A22C6F12AD3125500C8BC8C /* TeacherTableViewCell.xib in Resources */,
 				80B02756281BDF1C00B008D3 /* LaunchScreen.storyboard in Resources */,
+				5A48E3B52ACDD99D007B76E7 /* PartyTableViewCell.xib in Resources */,
+				5A22C6F52AD336EE00C8BC8C /* FooterTableViewCell.xib in Resources */,
 				80B02753281BDF1C00B008D3 /* Assets.xcassets in Resources */,
 				80B02751281BDF1900B008D3 /* Main.storyboard in Resources */,
+				5A48E3B12ACDD987007B76E7 /* SchoolTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,29 +586,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				80B0278C281BE95600B008D3 /* Extensions.swift in Sources */,
+				5A41C36F2AC8A43F005CD64C /* SelectionCommitteePartyViewController.swift in Sources */,
 				80AB2934285996B6009002F6 /* PaymentViewController.swift in Sources */,
 				807C637D285C681800D556A5 /* PrimaryViewController.swift in Sources */,
+				5A22C6F02AD3125500C8BC8C /* TeacherTableViewCell.swift in Sources */,
+				5A41C37D2AC8AEEB005CD64C /* PartyOrderViewController.swift in Sources */,
+				5A22C6ED2AD2FBE300C8BC8C /* SKActivityIndicatorView.swift in Sources */,
+				5A41C3752AC8AB88005CD64C /* PartyPrimaryViewController.swift in Sources */,
 				807C6389285C6B4600D556A5 /* PrimaryViewControllerCell.swift in Sources */,
+				5A41C3732AC8A8D5005CD64C /* PartySampleListVC.swift in Sources */,
+				5A41C3712AC8A70A005CD64C /* PartyPurposeOfVisitVC.swift in Sources */,
 				807C638B285C6B5E00D556A5 /* GroupViewControllerCell.swift in Sources */,
+				5A68C7C12AC4B3DB0052F758 /* PartyData.swift in Sources */,
 				801538AD282273CD00DB4106 /* FormViewController.swift in Sources */,
 				807C6387285C6B2500D556A5 /* IndividualViewControllerCell.swift in Sources */,
 				80605B6D28210162004126C2 /* ExpensesViewController.swift in Sources */,
+				5A75ADCB2AB0DCC900EF9D25 /* GroupBookData.swift in Sources */,
 				80B0274A281BDF1900B008D3 /* AppDelegate.swift in Sources */,
+				5A3FC1362AAB8E14002A3D06 /* StateData.swift in Sources */,
+				5A41C3812AC8AF1A005CD64C /* PartyOTPViewController.swift in Sources */,
 				807C6381285C685000D556A5 /* GroupViewController.swift in Sources */,
 				80D944A228239DE60077E958 /* PurposeOfVisitViewController.swift in Sources */,
+				5A75ADCD2AB0DD4C00EF9D25 /* DataItem.swift in Sources */,
 				80B0274C281BDF1900B008D3 /* SceneDelegate.swift in Sources */,
+				5A48E3B42ACDD99D007B76E7 /* PartyTableViewCell.swift in Sources */,
+				5A75ADC92AB0D62900EF9D25 /* PrimarySchoolData.swift in Sources */,
+				5A39CAF22AC089AB0094E9AA /* SelectedBooks.swift in Sources */,
 				80B0278E281BED7D00B008D3 /* SignInViewController.swift in Sources */,
 				806D148A2823829A00631219 /* SelectionCommitteeViewController.swift in Sources */,
 				80B0278A281BE94A00B008D3 /* UIView+Extension.swift in Sources */,
 				8071D39628928E3F00E91BDC /* Login.swift in Sources */,
+				5A68C7BF2AC4A32A0052F758 /* SearchSchoolData.swift in Sources */,
+				5A22C6EC2AD2FBE300C8BC8C /* SKActivityIndicatorViewStyle.swift in Sources */,
 				80B02790281C0D1F00B008D3 /* HomeViewController.swift in Sources */,
 				80605B6B28200457004126C2 /* ReportViewController.swift in Sources */,
 				8073ED5D28913671009513BE /* Constant.swift in Sources */,
+				5A82499E2AC7430D009E7813 /* OTPResponse.swift in Sources */,
+				5A41C3792AC8ABC4005CD64C /* PartyGroupViewController.swift in Sources */,
+				5A41C37B2AC8AD72005CD64C /* PartySelectedBookVC.swift in Sources */,
 				8071D39328928D1300E91BDC /* WebServices.swift in Sources */,
 				80C6AA6F285C54060008E656 /* SampleListViewController.swift in Sources */,
 				80AB29322858A068009002F6 /* OrderViewController.swift in Sources */,
 				80605B6F2821141A004126C2 /* SchoolViewController.swift in Sources */,
 				80ABA7512859FF5F00AAEE4A /* OTPViewController.swift in Sources */,
+				5A41C3772AC8ABA7005CD64C /* PartyIndividualViewController.swift in Sources */,
+				5A41C37F2AC8AF00005CD64C /* PartyPaymentViewController.swift in Sources */,
+				5A22C6F42AD336EE00C8BC8C /* FooterTableViewCell.swift in Sources */,
+				5A48E3B02ACDD987007B76E7 /* SchoolTableViewCell.swift in Sources */,
+				5A3381082AB2223600B1A22E /* SelectedBookViewController.swift in Sources */,
 				807C637F285C683900D556A5 /* IndividualViewController.swift in Sources */,
 				80605B712821142E004126C2 /* PartyViewController.swift in Sources */,
 				806D14882822924C00631219 /* AddPartyViewController.swift in Sources */,
@@ -689,10 +821,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Gurukul Publications/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app use camera to add image";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow Gurukul to access current location for tracking";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow Gurukul to access current location for tracking";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Allow Gurukul to access current location for tracking";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow Gurukul to access current location for tracking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -703,7 +840,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.gurukulpublications;
+				PRODUCT_BUNDLE_IDENTIFIER = org.gurukulpublication.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -723,10 +860,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Gurukul Publications/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app use camera to add image";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow Gurukul to access current location for tracking";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Allow Gurukul to access current location for tracking";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Allow Gurukul to access current location for tracking";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow Gurukul to access current location for tracking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -737,7 +879,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.gurukulpublications;
+				PRODUCT_BUNDLE_IDENTIFIER = org.gurukulpublication.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
