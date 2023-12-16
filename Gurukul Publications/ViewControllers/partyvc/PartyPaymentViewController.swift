@@ -285,8 +285,9 @@ class PartyPaymentViewController : UIViewController {
                 }
 
                 for firstViewController in viewControllers {
-                    if firstViewController is FormViewController {
-                        FormViewController.noOfVisit = self.noOfVisit - 1
+                    if firstViewController is AddPartyViewController {
+                        AddPartyViewController.noOfVisit = self.noOfVisit - 1
+                        onRefreshDelegate?.onRefreshed()
                         self.navigationController?.popToViewController(firstViewController, animated: true)
                         break
                     }
@@ -305,6 +306,8 @@ class PartyPaymentViewController : UIViewController {
     }
     
     func pushToHomeVC(){
+        onRefreshDelegate?.onRefreshed()
+        AddPartyViewController.noOfVisit = 0
         let vc = self.storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.HOME_VC) as! HomeViewController
         self.navigationController?.pushViewController(vc,animated: true)
     }

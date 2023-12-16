@@ -3,10 +3,17 @@ import UIKit
 import GrowingTextView
 import DropDown
 
+protocol OnRefreshDelegate{
+    func onRefreshed()
+}
+var onRefreshDelegate : OnRefreshDelegate?
 class FormViewController: UIViewController,UITextViewDelegate {
     
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var etState: UITextField!
+    
     @IBOutlet weak var etDistrict: UITextField!
     
     @IBOutlet weak var etArea: UITextField!
@@ -96,6 +103,8 @@ class FormViewController: UIViewController,UITextViewDelegate {
         self.btnEdit.addTarget(self, action: #selector(onEdit(_:)), for: .touchUpInside)
         setupUi()
         samplingMonthTop.constant = 16
+        
+        onRefreshDelegate = self
     }
     
     @IBAction func  onEdit( _ sender : UIButton){
@@ -759,6 +768,40 @@ class FormViewController: UIViewController,UITextViewDelegate {
         
     }
 }
-extension FormViewController{
+extension FormViewController : OnRefreshDelegate{
+    func onRefreshed() {
+        
+        self.stateList.removeAll()
+        self.stateStrList.removeAll()
+        
+        self.districtList.removeAll()
+        self.districtStrList.removeAll()
+        
+        self.cityList.removeAll()
+        self.cityStrList.removeAll()
+        
+        self.schoolList.removeAll()
+        self.schoolStrList.removeAll()
+        
+        self.partyList.removeAll()
+        self.partyStrList.removeAll()
+        
+        self.schoolList.removeAll()
+        self.schoolStrList.removeAll()
+        
+        self.partyList.removeAll()
+        self.partyStrList.removeAll()
+        
+        
+        self.etSchoolName.text = ""
+        self.partyTxt.text = ""
+        self.etState.text = ""
+        self.etArea.text = ""
+        self.etDistrict.text = ""
+        
+        self.reset()
+        self.scrollView.setContentOffset(.zero, animated: true)
+    }
+    
     
 }

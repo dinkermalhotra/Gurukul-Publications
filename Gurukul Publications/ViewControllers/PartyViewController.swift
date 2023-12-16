@@ -8,14 +8,18 @@ class PartyViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var nextBtn: UIButton!
     
+    @IBOutlet weak var lblVersion: UILabel!
+    
     var noOfVisit = 0
     var visitDate = ""
     static var partyID = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        onRefreshDelegate = self
         self.dateField.setInputViewDatePicker(target: self, selector: #selector(tapDone))
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
+        self.lblVersion.text = "Version \(appVersion)"
         
     }
     
@@ -69,4 +73,10 @@ class PartyViewController: UIViewController {
         }
     }
     
+}
+extension PartyViewController : OnRefreshDelegate{
+    func onRefreshed() {
+        self.textField.text = ""
+        self.dateField.text = ""
+    }
 }

@@ -7,6 +7,8 @@ class SchoolViewController: UIViewController
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var nextBtn: UIButton!
+    
+    @IBOutlet weak var lblVersion: UILabel!
         
     @IBOutlet weak var markButton: UIButton! //MARK MY ATTENDANCE
     var noOfVisit = 0
@@ -18,9 +20,11 @@ class SchoolViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        onRefreshDelegate = self
         self.dateField.setInputViewDatePicker(target: self, selector: #selector(tapDone))
         checkLocationPermission()
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
+        self.lblVersion.text = "Version \(appVersion)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -354,4 +358,10 @@ extension SchoolViewController: CLLocationManagerDelegate {
 }
 extension LosslessStringConvertible {
     var string: String { .init(self) }
+}
+extension SchoolViewController : OnRefreshDelegate{
+    func onRefreshed() {
+        self.textField.text = ""
+        self.dateField.text = ""
+    }
 }

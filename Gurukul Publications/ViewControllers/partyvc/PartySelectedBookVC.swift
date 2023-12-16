@@ -135,6 +135,7 @@ class PartySelectedBookVC : UIViewController, UITableViewDelegate,UITableViewDat
                 for firstViewController in viewControllers {
                     if firstViewController is AddPartyViewController {
                         AddPartyViewController.noOfVisit = self.noOfVisit - 1
+                        onRefreshDelegate?.onRefreshed()
                         self.navigationController?.popToViewController(firstViewController, animated: true)
                         break
                     }
@@ -154,6 +155,8 @@ class PartySelectedBookVC : UIViewController, UITableViewDelegate,UITableViewDat
     }
     
     func pushToHomeVC(){
+        onRefreshDelegate?.onRefreshed()
+        AddPartyViewController.noOfVisit = 0
         let vc = self.storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.HOME_VC) as! HomeViewController
         self.navigationController?.pushViewController(vc,animated: true)
     }

@@ -32,43 +32,43 @@ class PartyPurposeOfVisitVC: UIViewController {
         //submitBtnTop.constant = 30
         
         if(AddPartyViewController.visit_purpose == "Sample"){
-            visit_purpose = FormViewController.visit_purpose
+            visit_purpose = AddPartyViewController.visit_purpose
             checkBoxArray[0].isSelected = true
             selectedButton = 0
             saveDefaultValue = "0"
             showRemarksView()
         }else if(AddPartyViewController.visit_purpose == "First Visit"){
-            visit_purpose = FormViewController.visit_purpose
+            visit_purpose = AddPartyViewController.visit_purpose
             checkBoxArray[1].isSelected = true
             selectedButton = 1
             saveDefaultValue = "1"
             showRemarksView()
-        }else if(FormViewController.visit_purpose == "Order"){
-            visit_purpose = FormViewController.visit_purpose
+        }else if(AddPartyViewController.visit_purpose == "Order"){
+            visit_purpose = AddPartyViewController.visit_purpose
             checkBoxArray[2].isSelected = true
             selectedButton = 2
             saveDefaultValue = "2"
             showRemarksView()
         }else if(AddPartyViewController.visit_purpose == "Follow up"){
-            visit_purpose = FormViewController.visit_purpose
+            visit_purpose = AddPartyViewController.visit_purpose
             checkBoxArray[3].isSelected = true
             selectedButton = 3
             saveDefaultValue = "3"
             showRemarksView()
         }else if(AddPartyViewController.visit_purpose == "Collection"){
-            visit_purpose = FormViewController.visit_purpose
+            visit_purpose = AddPartyViewController.visit_purpose
             checkBoxArray[4].isSelected = true
             selectedButton = 4
             saveDefaultValue = "4"
             showRemarksView()
         }else if(AddPartyViewController.visit_purpose == "Gift"){
-            visit_purpose = FormViewController.visit_purpose
+            visit_purpose = AddPartyViewController.visit_purpose
             checkBoxArray[5].isSelected = true
             selectedButton = 5
             saveDefaultValue = "5"
             showRemarksView()
         }else if(AddPartyViewController.visit_purpose == "Sales Return"){
-            visit_purpose = FormViewController.visit_purpose
+            visit_purpose = AddPartyViewController.visit_purpose
             checkBoxArray[6].isSelected = true
             selectedButton = 6
             saveDefaultValue = "6"
@@ -244,6 +244,7 @@ class PartyPurposeOfVisitVC: UIViewController {
                 for firstViewController in viewControllers {
                     if firstViewController is AddPartyViewController {
                         AddPartyViewController.noOfVisit = self.noOfVisit - 1
+                        onRefreshDelegate?.onRefreshed()
                         self.navigationController?.popToViewController(firstViewController, animated: true)
                         break
                     }
@@ -294,6 +295,8 @@ class PartyPurposeOfVisitVC: UIViewController {
     }
     
     func pushToHomeVC(){
+        onRefreshDelegate?.onRefreshed()
+        AddPartyViewController.noOfVisit = 0
         let vc = self.storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.HOME_VC) as! HomeViewController
         self.navigationController?.pushViewController(vc,animated: true)
     }

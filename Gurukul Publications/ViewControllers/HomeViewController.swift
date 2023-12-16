@@ -8,10 +8,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var partyView: UIView!
     @IBOutlet weak var expensesView: UIView!
     
+    @IBOutlet weak var lblName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let userdef = UserDefaults.standard
+        let name = userdef.string(forKey: full_Name)
+        if name != nil{
+            self.lblName.text = name
+        }else{
+            self.lblName.text = ""
+        }
         setupUI()
     }
     
@@ -47,6 +54,7 @@ class HomeViewController: UIViewController {
         UserDefaults.standard.removeObject(forKey: LOGGIN_ID)
         UserDefaults.standard.removeObject(forKey: SCHOOL_ID)
         UserDefaults.standard.removeObject(forKey: PARTY_ID)
+        UserDefaults.standard.removeObject(forKey: full_Name)
         resetDefaults()
         let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.SIGNIN_VC) as! SignInViewController
         let navigationController = UINavigationController(rootViewController: loginViewController)

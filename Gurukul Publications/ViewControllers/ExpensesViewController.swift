@@ -97,6 +97,8 @@ class ExpensesViewController: UIViewController,UINavigationControllerDelegate,UI
     
     @IBOutlet weak var totalExpEt: UITextField!
     
+    @IBOutlet weak var lblVersion: UILabel!
+    
     var expenseType = "Local"
     var modeOfTravel = ""
     var returnStr = ""
@@ -121,7 +123,7 @@ class ExpensesViewController: UIViewController,UINavigationControllerDelegate,UI
     {
         super.viewDidLoad()
         
-        self.submitBtn.isEnabled = false
+        //self.submitBtn.isEnabled = false
         self.submitBtn.isUserInteractionEnabled = false
         self.submitBtn.alpha = 0.4
         
@@ -149,6 +151,8 @@ class ExpensesViewController: UIViewController,UINavigationControllerDelegate,UI
         
         self.outTAET.addTarget(self, action: #selector(textFieldDidChange(_:)),
                                   for: .editingChanged)
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
+        self.lblVersion.text = "Version \(appVersion)"
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -938,12 +942,12 @@ extension ExpensesViewController{
             removeSpinner()
             if(status){
                showToast(message: message)
-                self.submitBtn.isEnabled = true
+                //self.submitBtn.isEnabled = true
                 self.submitBtn.isUserInteractionEnabled = true
                 self.submitBtn.alpha = 1
             }else{
                 showToast(message: message)
-                self.submitBtn.isEnabled = false
+                //self.submitBtn.isEnabled = false
                 self.submitBtn.isUserInteractionEnabled = false
                 self.submitBtn.alpha = 0.4
             }

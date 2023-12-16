@@ -58,8 +58,10 @@ class SignInViewController: UIViewController {
                 self.loginData = login ?? []
                 print(self.loginData)
                 let userId = self.loginData[0].id
+                let fullname  = self.loginData[0].fullname
                 let userdef = UserDefaults.standard
                 userdef.set(userId, forKey: user_Id)
+                userdef.set(fullname, forKey: full_Name)
                 
                 removeSpinner()
                 

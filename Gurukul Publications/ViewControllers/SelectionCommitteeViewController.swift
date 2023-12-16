@@ -188,7 +188,7 @@ class SelectionCommitteeViewController: UIViewController,UINavigationControllerD
     @IBAction func dropDownBtnAction(_ sender: Any)
     {
         if receivedString == "true"{
-            dropDownMenu.dataSource = ["Coordinator", "Principle", "Director", "Librarian","Vice Principle","Subject Teacher","Others"]
+            dropDownMenu.dataSource = ["Coordinator", "Principal", "Director", "Librarian","Vice Principal","Subject Teacher","Others"]
         }else{
             dropDownMenu.dataSource =  ["Owner", "Proprietor", "Business Partner", "Manager"]
         }
@@ -306,7 +306,7 @@ class SelectionCommitteeViewController: UIViewController,UINavigationControllerD
             
             params["concern_person"] = self.concern_person as AnyObject
             params["concern_name"] = self.concern_name as AnyObject
-            params["concern_m"] = self.concern_person as AnyObject
+            params["concern_m"] = self.concern_phone as AnyObject
             params["concern_remarks"] = self.concern_remark as AnyObject
             params["teacher_names"]  = "" as AnyObject
             params["teacher_mobiles"] = "" as AnyObject

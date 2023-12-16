@@ -58,6 +58,7 @@ class PartyOrderViewController : UIViewController,UIImagePickerControllerDelegat
                 for firstViewController in viewControllers {
                     if firstViewController is AddPartyViewController {
                         AddPartyViewController.noOfVisit = self.noOfVisit - 1
+                        onRefreshDelegate?.onRefreshed()
                         self.navigationController?.popToViewController(firstViewController, animated: true)
                         break
                     }
@@ -76,6 +77,8 @@ class PartyOrderViewController : UIViewController,UIImagePickerControllerDelegat
     }
     
     func pushToHomeVC(){
+        onRefreshDelegate?.onRefreshed()
+        AddPartyViewController.noOfVisit = 0
         let vc = self.storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.HOME_VC) as! HomeViewController
         self.navigationController?.pushViewController(vc,animated: true)
     }

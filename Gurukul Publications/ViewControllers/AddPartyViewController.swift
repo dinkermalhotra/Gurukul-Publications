@@ -4,6 +4,8 @@ import GrowingTextView
 import DropDown
 class AddPartyViewController: UIViewController,UITextViewDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var remarksView: GrowingTextView!
     @IBOutlet var partyCategory: [UIButton]!
     @IBOutlet weak var stateTxt: UITextField!
@@ -59,6 +61,7 @@ class AddPartyViewController: UIViewController,UITextViewDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        onRefreshDelegate = self
         self.btnEdit.isHidden = true
         self.btnEdit.addTarget(self, action: #selector(onEdit(_:)), for: .touchUpInside)
         setupUI()
@@ -338,7 +341,7 @@ class AddPartyViewController: UIViewController,UITextViewDelegate {
             vc.concern_person = self.partyData.concernPerson
             vc.concern_name = self.partyData.concernName
             vc.concern_phone = self.partyData.concernM
-            vc.noOfVisit = FormViewController.noOfVisit
+            vc.noOfVisit = AddPartyViewController.noOfVisit
             navigationController?.pushViewController(vc,animated: true)
         }
         
@@ -492,6 +495,44 @@ extension AddPartyViewController{
         }
         
     }
+}
+extension AddPartyViewController : OnRefreshDelegate{
+    func onRefreshed() {
+        
+        self.stateList.removeAll()
+        self.stateStrList.removeAll()
+        
+        self.districtList.removeAll()
+        self.districtStrList.removeAll()
+        
+        self.cityList.removeAll()
+        self.cityStrList.removeAll()
+        
+        self.schoolList.removeAll()
+        self.schoolStrList.removeAll()
+        
+        self.partyList.removeAll()
+        self.partyStrList.removeAll()
+        
+        self.partyList.removeAll()
+        self.partyStrList.removeAll()
+        
+        self.schoolList.removeAll()
+        self.schoolStrList.removeAll()
+        
+        self.partyList.removeAll()
+        self.partyStrList.removeAll()
+        
+        self.partyNameTxt.text = ""
+        self.stateTxt.text = ""
+        self.areaTxt.text = ""
+        self.districtTxt.text = ""
+        
+        self.reset()
+        self.scrollView.setContentOffset(.zero, animated: true)
+    }
+    
+    
 }
 
 //params.put("seller_id", Constants.createPartFromString(Prefs.getId(PartyOTPActivity.this)));

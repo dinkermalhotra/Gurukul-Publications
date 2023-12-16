@@ -122,7 +122,7 @@ class SelectionCommitteePartyViewController: UIViewController,UINavigationContro
             
             params["concern_person"] = self.concern_person as AnyObject
             params["concern_name"] = self.concern_name as AnyObject
-            params["concern_m"] = self.concern_person as AnyObject
+            params["concern_m"] = self.concern_phone as AnyObject
             params["p_concern_remarks"] = self.concern_remark as AnyObject
             
             print(params)

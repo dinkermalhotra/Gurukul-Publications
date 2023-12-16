@@ -271,6 +271,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="expensesView" destination="VjJ-wT-7NK" id="9Ef-vt-0Gh"/>
+                        <outlet property="lblName" destination="oaw-cB-AkV" id="W6W-WY-5ia"/>
                         <outlet property="partyView" destination="1vx-01-Jhh" id="Um7-RU-jl9"/>
                         <outlet property="schoolView" destination="fVt-tm-xbx" id="gsd-G2-bb7"/>
                         <outlet property="segmentControl" destination="wKQ-vJ-sSJ" id="skh-V0-MMA"/>
@@ -372,7 +373,7 @@
                                     <action selector="nextBtnAction:" destination="AvU-xz-FH8" eventType="touchUpInside" id="RKl-df-vqb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y92-77-efZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y92-77-efZ">
                                 <rect key="frame" x="134.5" y="493" width="74" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="WLd-Pf-kGe"/>
@@ -412,6 +413,7 @@
                     </view>
                     <connections>
                         <outlet property="dateField" destination="0H5-Uu-qeR" id="vmc-09-iDI"/>
+                        <outlet property="lblVersion" destination="Y92-77-efZ" id="pre-5A-Dlj"/>
                         <outlet property="nextBtn" destination="D0n-fV-rpa" id="nHo-B1-Vm5"/>
                         <outlet property="textField" destination="l86-Od-vQ4" id="jZh-Hp-a8B"/>
                     </connections>
@@ -534,7 +536,7 @@
                                     <action selector="handleMarkButton:" destination="P8L-ed-LoX" eventType="touchUpInside" id="KG0-bF-TUl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbM-Wf-seM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbM-Wf-seM">
                                 <rect key="frame" x="134.5" y="493" width="74" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="QAV-YK-eaS"/>
@@ -577,6 +579,7 @@
                     </view>
                     <connections>
                         <outlet property="dateField" destination="kvt-Pn-ibh" id="dsw-rY-Rhs"/>
+                        <outlet property="lblVersion" destination="QbM-Wf-seM" id="3se-tP-zec"/>
                         <outlet property="markButton" destination="zHU-QF-kbt" id="9RI-VM-imX"/>
                         <outlet property="nextBtn" destination="87g-BS-TQO" id="YMf-eP-GMw"/>
                         <outlet property="textField" destination="fMh-eE-pf7" id="Jdw-WW-1pV"/>
@@ -1523,6 +1526,7 @@
                         <outlet property="partyView" destination="773-5b-GJr" id="8er-jZ-fxn"/>
                         <outlet property="remarksView" destination="Irh-Ur-OQc" id="CEn-Ln-Rhk"/>
                         <outlet property="samplingMonthTop" destination="zMI-bQ-sbQ" id="yxu-Ml-BzZ"/>
+                        <outlet property="scrollView" destination="531-lj-YPz" id="KtV-Xz-MDH"/>
                         <outlet property="throughPartyBtn" destination="qmd-BA-GYQ" id="oMK-Gh-hPH"/>
                         <outlet property="viewArea" destination="eSY-XL-rLe" id="Mqv-43-kaO"/>
                         <outletCollection property="boardBtnArray" destination="c7f-OW-2L7" collectionClass="NSMutableArray" id="7Sz-3k-Eqv"/>
@@ -1913,7 +1917,7 @@
                                                                     <constraint firstAttribute="height" constant="40" id="Jvx-Am-KGr"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8T-dG-7Oj">
                                                                 <rect key="frame" x="0.0" y="72" width="311" height="0.5"/>
@@ -1952,7 +1956,7 @@
                                                                     <constraint firstAttribute="height" constant="40" id="Vpy-wp-w7y"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1h-hp-pRh">
                                                                 <rect key="frame" x="0.0" y="72" width="311" height="0.5"/>
@@ -1991,7 +1995,7 @@
                                                                     <constraint firstAttribute="height" constant="40" id="rpj-Cp-yF2"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcf-mG-cbE">
                                                                 <rect key="frame" x="0.0" y="72" width="311" height="0.5"/>
@@ -3238,7 +3242,7 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="dJU-Bt-qnF"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="n0f-XH-rYc"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9y-UA-7ey">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9y-UA-7ey">
                                 <rect key="frame" x="134.5" y="2159" width="74" height="18"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -3275,6 +3279,7 @@
                         <outlet property="expense3" destination="3BU-c9-EEN" id="OIF-Cn-3SK"/>
                         <outlet property="imageStackView" destination="0F3-hr-VdK" id="ZHQ-ab-P2g"/>
                         <outlet property="kmTravled" destination="6bo-zT-c03" id="4Zo-xt-Ngi"/>
+                        <outlet property="lblVersion" destination="I9y-UA-7ey" id="SUg-co-Scq"/>
                         <outlet property="localBtn" destination="UsI-0j-jnn" id="z4E-L7-vgY"/>
                         <outlet property="localDAET" destination="PtD-yV-0IF" id="ans-tq-66H"/>
                         <outlet property="localKMET" destination="YNz-P4-Bec" id="j0Z-0l-jTQ"/>
@@ -3987,6 +3992,7 @@
                         <outlet property="partyPhoneTxt" destination="Dph-sf-juM" id="QrO-xw-7DS"/>
                         <outlet property="pincodeTxt" destination="xa2-gx-my9" id="4Pz-GW-vE9"/>
                         <outlet property="remarksView" destination="0Dq-Qo-99k" id="qYa-aZ-QUT"/>
+                        <outlet property="scrollView" destination="TX5-AE-Pgh" id="nyi-oK-GeH"/>
                         <outlet property="stateTxt" destination="aHk-Op-YY8" id="R7E-rt-JaB"/>
                         <outlet property="viewArea" destination="nS9-9Q-9FE" id="ycT-jE-zrc"/>
                         <outletCollection property="partyCategory" destination="OGN-DG-0fV" collectionClass="NSMutableArray" id="J3O-fP-9Ti"/>
@@ -5531,7 +5537,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="370-4M-eAg">
-                                <rect key="frame" x="-13" y="-10" width="383" height="668"/>
+                                <rect key="frame" x="-18" y="-13" width="384" height="666"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="w19-6S-QM9" kind="embed" id="TdW-3J-Cak"/>
@@ -5973,7 +5979,7 @@
             <objects>
                 <viewController id="w19-6S-QM9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wjT-nO-anU">
-                        <rect key="frame" x="0.0" y="0.0" width="383" height="668"/>
+                        <rect key="frame" x="0.0" y="0.0" width="384" height="666"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="k8g-U2-PM3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -52,6 +52,7 @@ class OrderViewController: UIViewController,UIImagePickerControllerDelegate,UINa
                 for firstViewController in viewControllers {
                     if firstViewController is FormViewController {
                         FormViewController.noOfVisit = self.noOfVisit - 1
+                        onRefreshDelegate?.onRefreshed()
                         self.navigationController?.popToViewController(firstViewController, animated: true)
                         break
                     }
@@ -70,6 +71,8 @@ class OrderViewController: UIViewController,UIImagePickerControllerDelegate,UINa
     }
     
     func pushToHomeVC(){
+        onRefreshDelegate?.onRefreshed()
+        FormViewController.noOfVisit = 0
         let vc = self.storyboard?.instantiateViewController(withIdentifier: STORYBOARDS_ID.HOME_VC) as! HomeViewController
         self.navigationController?.pushViewController(vc,animated: true)
     }
@@ -148,7 +151,11 @@ extension OrderViewController{
         params["seller_id"] = user_id as AnyObject
 //        params["visit_purpose"] = self.visit_purpose as AnyObject
 //        params["visit_purpose_remarks"] = self.remarksTxt.text as AnyObject
-        params["old_school_id"] = schoolID as AnyObject
+        if(schoolID != nil){
+            params["old_school_id"] = schoolID as AnyObject
+        }else{
+            params["old_school_id"] = "" as AnyObject
+        }
         params["sampling"] = "" as AnyObject
        
         params["primary_sampling"] = "" as AnyObject
